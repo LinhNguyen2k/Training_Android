@@ -1,4 +1,4 @@
-package com.example.studentmanagement;
+package com.example.studentmanagement.adapter;
 
 import android.content.Context;
 import android.content.Intent;
@@ -15,10 +15,14 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.chauthai.swipereveallayout.SwipeRevealLayout;
 import com.chauthai.swipereveallayout.ViewBinderHelper;
+import com.example.studentmanagement.ProFileStudent;
+import com.example.studentmanagement.R;
+import com.example.studentmanagement.setOnclickStudents;
+import com.example.studentmanagement.sql.SQL_Helper;
+import com.example.studentmanagement.model.Students;
 
 import org.jetbrains.annotations.NotNull;
 
-import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -27,6 +31,12 @@ public class AdapterStudents extends RecyclerView.Adapter<AdapterStudents.Adapte
     List<Students> studentsLists;
     Context context;
     int mPosotiom;
+    setOnclickStudents onclickStudents;
+
+    public void setOnclickStudents(setOnclickStudents onclickStudents) {
+        this.onclickStudents = onclickStudents;
+    }
+
     private ViewBinderHelper viewBinderHelper = new ViewBinderHelper();
 
     public AdapterStudents(List<Students> studentsLists, Context context) {
@@ -60,6 +70,27 @@ public class AdapterStudents extends RecyclerView.Adapter<AdapterStudents.Adapte
         //DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM/dd/yyyy");
         holder.tv_dOfBirth.setText((String.valueOf( students.getdOfBirth())));
 
+//        holder.itemView.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(context, ProFileStudent.class);
+//                intent.putExtra("Name",students.getName());
+//                intent.putExtra("PhoneNumber",students.getPhoneNumber());
+//                intent.putExtra("DateOfBirth",students.getdOfBirth());
+//                intent.putExtra("Major",students.getMajor());
+//                intent.putExtra("Level",students.getLevel());
+//                mPosotiom = position;
+//                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+//                context.startActivity(intent);
+//            }
+//        });
+        holder.layout_item.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onclickStudents.onClickItem(students);
+            }
+        });
+
         viewBinderHelper.bind(holder.swipeRevealLayout, String.valueOf(students.getPhoneNumber()));
         holder.linearLayoutDelete.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -68,21 +99,6 @@ public class AdapterStudents extends RecyclerView.Adapter<AdapterStudents.Adapte
                 notifyItemRemoved(holder.getAdapterPosition());
                 SQL_Helper sql_helper = new SQL_Helper(context);
                 sql_helper.DeleteStudent(students.getPhoneNumber());
-            }
-        });
-
-        holder.itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(context, ProFileStudent.class);
-                intent.putExtra("Name",students.getName());
-                intent.putExtra("PhoneNumber",students.getPhoneNumber());
-                intent.putExtra("DateOfBirth",students.getdOfBirth());
-                intent.putExtra("Major",students.getMajor());
-                intent.putExtra("Level",students.getLevel());
-                mPosotiom = position;
-                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                context.startActivity(intent);
             }
         });
     }
@@ -96,8 +112,8 @@ public class AdapterStudents extends RecyclerView.Adapter<AdapterStudents.Adapte
     }
 
     public class AdapterViewHolder extends RecyclerView.ViewHolder{
-        private SwipeRevealLayout swipeRevealLayout;
-        LinearLayout linearLayoutDelete;
+        SwipeRevealLayout swipeRevealLayout;
+        LinearLayout linearLayoutDelete, layout_item;
         RecyclerView rc_listStudents;
         TextView tv_name, tv_phoneNumber, tv_dOfBirth, tv_level, tv_major;
         public AdapterViewHolder(@NonNull @org.jetbrains.annotations.NotNull View itemView) {
@@ -110,6 +126,7 @@ public class AdapterStudents extends RecyclerView.Adapter<AdapterStudents.Adapte
             tv_major = itemView.findViewById(R.id.tv_major);
             swipeRevealLayout = itemView.findViewById(R.id.swipeRevealLayout);
             linearLayoutDelete = itemView.findViewById(R.id.layoutDelete);
+            layout_item = itemView.findViewById(R.id.layout_item);
         }
     }
     public void filterList(ArrayList<Students> filter)

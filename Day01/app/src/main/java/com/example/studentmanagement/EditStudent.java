@@ -8,6 +8,9 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.example.studentmanagement.model.Students;
+import com.example.studentmanagement.sql.SQL_Helper;
+
 public class EditStudent extends AppCompatActivity {
     EditText tv_name, tv_phoneNumber, tv_major, tv_level, tv_dOfBirth ;
     TextView tv_back, tv_done;
@@ -49,6 +52,12 @@ public class EditStudent extends AppCompatActivity {
                 sql_helper.UpdateStudent(name,students);
                 startActivity(intent);
 
+            }
+        });
+        tv_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
             }
         });
 

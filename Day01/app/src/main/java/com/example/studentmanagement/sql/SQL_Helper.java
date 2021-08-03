@@ -1,10 +1,12 @@
-package com.example.studentmanagement;
+package com.example.studentmanagement.sql;
 
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+
+import com.example.studentmanagement.model.Students;
 
 import java.util.ArrayList;
 import java.util.List;

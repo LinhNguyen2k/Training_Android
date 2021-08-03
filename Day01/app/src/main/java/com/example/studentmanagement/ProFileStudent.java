@@ -8,10 +8,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import com.example.studentmanagement.model.Students;
+
 public class ProFileStudent extends AppCompatActivity {
 
     TextView tv_name, tv_phoneNumber, tv_major, tv_level, tv_back, tv_dOfBirth, tv_edit;
-    int mPossition;
+    Students students;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,17 +22,18 @@ public class ProFileStudent extends AppCompatActivity {
         actionBar.hide();
         AnhXa();
         Intent intent = getIntent();
-        String name = intent.getStringExtra("Name");
-        int phoneNumber = intent.getIntExtra("PhoneNumber",1);
-        String dateOfBirth = intent.getStringExtra("DateOfBirth");
-        String level = intent.getStringExtra("Level");
-        String major = intent.getStringExtra("Major");
+        students = intent.getParcelableExtra("object");
+//        String name = intent.getStringExtra("Name");
+//        int phoneNumber = intent.getIntExtra("PhoneNumber",1);
+//        String dateOfBirth = intent.getStringExtra("DateOfBirth");
+//        String level = intent.getStringExtra("Level");
+//        String major = intent.getStringExtra("Major");
 
-        tv_name.setText(name);
-        tv_phoneNumber.setText(String.valueOf(phoneNumber));
-        tv_major.setText(major);
-        tv_level.setText(level);
-        tv_dOfBirth.setText(dateOfBirth);
+        tv_name.setText(students.getName());
+        tv_phoneNumber.setText(String.valueOf(students.getPhoneNumber()));
+        tv_major.setText(students.getMajor());
+        tv_level.setText(students.getLevel());
+        tv_dOfBirth.setText(students.getdOfBirth());
 
 
         tv_back.setOnClickListener(new View.OnClickListener() {

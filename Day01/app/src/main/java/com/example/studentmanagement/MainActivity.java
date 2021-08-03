@@ -4,19 +4,24 @@ import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Toast;
+
+import com.example.studentmanagement.adapter.AdapterStudents;
+import com.example.studentmanagement.model.Students;
+import com.example.studentmanagement.sql.SQL_Helper;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -31,6 +36,8 @@ public class MainActivity extends AppCompatActivity {
     RecyclerView rc_listStudents;
     List<Students> studentsLists;
     AdapterStudents adapterStudents;
+    Students students;
+    int mPosition;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,6 +52,18 @@ public class MainActivity extends AppCompatActivity {
         rc_listStudents.setLayoutManager(linearLayoutManager);
         adapterStudents= new AdapterStudents(studentsLists, getBaseContext());
         rc_listStudents.setAdapter(adapterStudents);
+
+        adapterStudents.setOnclickStudents(new setOnclickStudents() {
+            @Override
+            public void onClickItem(Students students) {
+                mPosition = studentsLists.indexOf(students);
+//                Toast.makeText(getBaseContext(),"Hello",Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(MainActivity.this,ProFileStudent.class);
+                intent.putExtra("object", (Parcelable) studentsLists.get(mPosition));
+                startActivity(intent);
+            }
+        });
+
         img_addStudent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -112,7 +131,6 @@ public class MainActivity extends AppCompatActivity {
         {
             if(item.getName().toLowerCase().contains(text.toLowerCase()))
                 filter.add(item);
-
         }
         adapterStudents.filterList(filter);
     }
@@ -160,34 +178,27 @@ public class MainActivity extends AppCompatActivity {
         }
     }
     @RequiresApi(api = Build.VERSION_CODES.N)
-    public List<Students> SortByName(){
+    public void SortByName(){
         List<Students> list = new ArrayList<>();
         SQL_Helper sql_helper = new SQL_Helper(this);
         list = sql_helper.GetAllStudents();
         Collections.sort(list, (sv1, sv2) -> sv1.getName().compareTo(sv2.getName()));
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(MainActivity.this);
-        rc_listStudents.setHasFixedSize(true);
-        rc_listStudents.setLayoutManager(linearLayoutManager);
-        adapterStudents= new AdapterStudents(list, getBaseContext());
-        rc_listStudents.setAdapter(adapterStudents);
-        return list;
+        SetLayout(list);
     }
     @RequiresApi(api = Build.VERSION_CODES.N)
-    public List<Students> SortByDBO(){
+    public void SortByDBO(){
         List<Students> list = new ArrayList<>();
         SQL_Helper sql_helper = new SQL_Helper(this);
         list = sql_helper.GetAllStudents();
 
         Collections.sort(list, (sv1, sv2) -> sv2.getdOfBirth().compareTo(sv1.getdOfBirth()));
         SetLayout(list);
-        return list;
     }
     @RequiresApi(api = Build.VERSION_CODES.N)
-    public List<Students> SortByDPhoneNumber(){
+    public void SortByDPhoneNumber(){
         List<Students> list = new ArrayList<>();
         SQL_Helper sql_helper = new SQL_Helper(this);
         list = sql_helper.GetAllStudents();
-        //Collections.sort(list, (sv1, sv2) -> sv2.getPhoneNumber().compareTo(sv1.getPhoneNumber()));
         Collections.sort(list, new Comparator<Students>() {
 
             @Override
@@ -196,7 +207,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         SetLayout(list);
-        return list;
     }
     public void SetLayout(List<Students> list){
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(MainActivity.this);

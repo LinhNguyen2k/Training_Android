@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.chauthai.swipereveallayout.SwipeRevealLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.chauthai.swipereveallayout.SwipeRevealLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/swipeRevealLayout"
     android:layout_width="match_parent"
     android:background="@drawable/radius_item"
@@ -25,6 +26,7 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/layout_item"
         android:padding="@dimen/_5sdp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
