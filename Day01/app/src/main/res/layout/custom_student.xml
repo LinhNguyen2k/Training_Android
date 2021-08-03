@@ -1,21 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/backgroud"
+<com.chauthai.swipereveallayout.SwipeRevealLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/swipeRevealLayout"
     android:layout_width="match_parent"
+    android:background="@drawable/radius_item"
     android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    android:padding="20dp"
-    android:layout_margin="15dp">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_marginLeft="@dimen/_5sdp"
+    app:mode="same_level"
+    app:dragEdge="right">
+    <LinearLayout
+        android:gravity="center"
+        android:id="@+id/layoutDelete"
+        android:background="#FA0000"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+        <TextView
+            android:textSize="20dp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:text="delete"
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
 
     <LinearLayout
-        android:layout_gravity="center_vertical"
-        android:layout_marginLeft="10dp"
-        android:layout_width="0dp"
+        android:padding="@dimen/_5sdp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_weight="2">
+        android:orientation="vertical">
         <TextView
+            android:layout_gravity="center"
             android:textSize="20dp"
             android:textStyle="bold"
             android:textColor="#070707"
@@ -23,33 +38,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             ></TextView>
-        <LinearLayout
-            android:layout_marginTop="10dp"
+        <TextView
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="#070707"
+            android:id="@+id/tv_dOfBirth"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:weightSum="4"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_weight="4"
-                android:textSize="20dp"
-                android:textStyle="bold"
-                android:textColor="#070707"
-                android:id="@+id/tv_dOfBirth"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                ></TextView>
-        </LinearLayout>
-
-    </LinearLayout>
-    <LinearLayout
-        android:layout_gravity="center_vertical"
-        android:layout_marginLeft="20dp"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_weight="2">
+            android:layout_gravity="center"
+            ></TextView>
         <TextView
             android:textSize="20dp"
             android:textStyle="bold"
@@ -58,24 +55,22 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             ></TextView>
-        <LinearLayout
-            android:layout_marginTop="10dp"
+        <TextView
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="#070707"
+            android:id="@+id/tv_level"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:weightSum="4"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_weight="4"
-                android:textSize="20dp"
-                android:textStyle="bold"
-                android:textColor="#070707"
-                android:id="@+id/tv_level"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                ></TextView>
-        </LinearLayout>
-
+            android:layout_gravity="center"
+            ></TextView>
+        <TextView
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="#070707"
+            android:id="@+id/tv_major"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            ></TextView>
     </LinearLayout>
-</LinearLayout>
+</com.chauthai.swipereveallayout.SwipeRevealLayout >
