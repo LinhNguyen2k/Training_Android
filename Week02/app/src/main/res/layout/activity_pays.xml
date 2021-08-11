@@ -5,7 +5,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        tools:context=".Pays"
+        tools:context=".Pays "
         android:layout_height="match_parent">
 
         <androidx.constraintlayout.widget.Guideline
@@ -202,6 +202,7 @@
                     android:src="@drawable/ic_shape1"
                     android:textColor="#000000"
                     android:textSize="10sp" />
+
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/bnt_money"
                     android:layout_width="wrap_content"
@@ -215,6 +216,7 @@
                     android:fontFamily="@font/montserrat_semibold"
                     android:left="@+id/img_edit"
                     android:text="20,00€" />
+
                 <TextView xmlns:android="http://schemas.android.com/apk/res/android"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
