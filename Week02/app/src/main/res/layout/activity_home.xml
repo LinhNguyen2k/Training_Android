@@ -1,532 +1,603 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-    <androidx.constraintlayout.widget.ConstraintLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
 
-        android:background="#f9f9f9"
-        tools:context=".Home">
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/line1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.35" />
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/line2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.65" />
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/line3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.079" />
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/line4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.026" />
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/line5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.89" />
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/line6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.95" />
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/line7"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.115" />
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/line8"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.376" />
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/line9"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.05" />
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/line10"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.15" />
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/line11"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.31" />
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/line12"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.35" />
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/line13"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.46" />
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/line14"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.6" />
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/line15"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.625" />
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/line16"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.85" />
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/line17"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.222" />
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/line18"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.142" />
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/line19"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.139" />
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/line20"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.033" />
+    android:background="#f9f9f9"
+    tools:context=".Home">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/line1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.35" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/line2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.65" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/line3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.079" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/line4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.026" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/line5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.89" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/line6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/line7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.115" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/line8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.376" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/line9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/line10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.15" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/line11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.31" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/line12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.35" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/line13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.46" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/line14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.6" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/line15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.625" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/line16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.85" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/line17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.222" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/line18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.142" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/line19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.139" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/line20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.033" />
+
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/line21"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.56" />
-        <ImageView
-            android:layout_width="36dp"
-            android:layout_height="36dp"
-            android:src="@drawable/bitmap_copy_2"
-            app:layout_constraintRight_toRightOf="@id/line10"
-            app:layout_constraintTop_toTopOf="@id/line4" />
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            app:layout_constraintBottom_toBottomOf="@id/line20"
-            app:layout_constraintTop_toTopOf="@id/line4"
-            app:layout_constraintLeft_toLeftOf="@id/line19"
-            app:layout_constraintRight_toRightOf="@id/line10"
-            android:backgroundTint="#FF0000"/>
 
-        <ImageView
-            android:id="@+id/img_payPal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_group"
-            app:layout_constraintBottom_toBottomOf="@id/line3"
-            app:layout_constraintLeft_toLeftOf="@id/line1"
-            app:layout_constraintRight_toRightOf="@id/line2"
-            app:layout_constraintTop_toTopOf="@id/line4" />
-        <ImageView
-            android:id="@+id/img_settings"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_settings_black_18_dp"
-            app:layout_constraintBottom_toBottomOf="@id/line3"
-            app:layout_constraintLeft_toLeftOf="@id/line5"
-            app:layout_constraintRight_toRightOf="@id/line6"
-            app:layout_constraintTop_toTopOf="@id/line4" />
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cv_infoUser"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            app:cardCornerRadius="5dp"
-            app:layout_constraintBottom_toBottomOf="@id/line8"
+    <ImageView
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:src="@drawable/bitmap_copy_2"
+        app:layout_constraintRight_toRightOf="@id/line10"
+        app:layout_constraintTop_toTopOf="@id/line4" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:backgroundTint="#FF0000"
+        app:layout_constraintBottom_toBottomOf="@id/line20"
+        app:layout_constraintLeft_toLeftOf="@id/line19"
+        app:layout_constraintRight_toRightOf="@id/line10"
+        app:layout_constraintTop_toTopOf="@id/line4" />
+
+    <ImageView
+        android:id="@+id/img_payPal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_group"
+        app:layout_constraintBottom_toBottomOf="@id/line3"
+        app:layout_constraintLeft_toLeftOf="@id/line1"
+        app:layout_constraintRight_toRightOf="@id/line2"
+        app:layout_constraintTop_toTopOf="@id/line4" />
+
+    <ImageView
+        android:id="@+id/img_settings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_settings_black_18_dp"
+        app:layout_constraintBottom_toBottomOf="@id/line3"
+        app:layout_constraintLeft_toLeftOf="@id/line5"
+        app:layout_constraintRight_toRightOf="@id/line6"
+        app:layout_constraintTop_toTopOf="@id/line4" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_infoUser"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:cardCornerRadius="5dp"
+        app:layout_constraintBottom_toBottomOf="@id/line8"
+        app:layout_constraintLeft_toLeftOf="@id/line9"
+        app:layout_constraintRight_toRightOf="@id/line6"
+        app:layout_constraintTop_toTopOf="@+id/line7">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/background_infouser"
+            android:paddingLeft="16dp"
+            android:paddingTop="20dp"
             app:layout_constraintLeft_toLeftOf="@id/line9"
             app:layout_constraintRight_toRightOf="@id/line6"
             app:layout_constraintTop_toTopOf="@+id/line7">
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/background_infouser"
-                android:paddingLeft="16dp"
-                android:paddingTop="20dp"
-                app:layout_constraintLeft_toLeftOf="@id/line9"
-                app:layout_constraintRight_toRightOf="@id/line6"
-                app:layout_constraintTop_toTopOf="@+id/line7">
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/cv_user"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:cardCornerRadius="30dp">
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:src="@drawable/bitmap_copy_5" />
-                </androidx.cardview.widget.CardView>
-                <TextView
-                    android:id="@+id/tv_nameInfo"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="6dp"
-                    android:layout_below="@+id/cv_user"
-                    android:fontFamily="@font/montserrat_medium"
-                    android:text="Nina te ha enviado "
-                    android:textColor="@color/white"
-                    android:textSize="14sp" />
-                <TextView
-                    android:id="@+id/tv_money"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/tv_nameInfo"
-                    android:fontFamily="@font/montserrat_semibold"
-                    android:text="20,00€"
-                    android:textColor="@color/white"
-                    android:textSize="28sp" />
-                <TextView
-                    android:id="@+id/btn_detalles"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/custom_detalles"
-                    android:fontFamily="@font/montserrat_semibold"
-                    android:text="VER DETALLES"
-                    android:layout_below="@+id/tv_money"
-                    android:textColor="@color/white"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/cv_user"
-                    app:layout_constraintTop_toTopOf="parent" />
-                <TextView
-                    android:id="@+id/tv_Mensaje"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/tv_money"
-                    android:layout_marginLeft="50dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_toRightOf="@+id/btn_detalles"
-                    android:text="Mensaje"
-                    android:textColor="@color/white"
-                    android:textSize="10sp" />
-                <TextView
-                    android:layout_marginLeft="50dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/tv_Mensaje"
-                    android:layout_toRightOf="@id/btn_detalles"
-                    android:fontFamily="@font/medium"
-                    android:text="Por la cena... 🍕"
-                    android:textColor="@color/white"
-                    android:textSize="18sp" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/tv_money"
-                    android:layout_alignParentTop="true"
-                    android:layout_alignParentRight="true"
-                    android:layout_margin="10dp"
-                    android:background="@drawable/custom_hoy"
-                    android:fontFamily="@font/montserrat_semibold"
-                    android:text="Hoy"
-                    android:textColor="#000000"
-                    android:textSize="10sp" />
-            </RelativeLayout>
-        </androidx.cardview.widget.CardView>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            style="@style/TextView_Edit_Home_Style1"
-            android:text="Enviar de nuevo"
-            app:layout_constraintLeft_toLeftOf="@id/line9"
-            app:layout_constraintTop_toTopOf="@id/line8" />
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:orientation="horizontal"
-            android:weightSum="4"
-            app:layout_constraintBottom_toBottomOf="@id/line21"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/line13">
-            <LinearLayout
-                android:id="@+id/layout_info"
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_user"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center_horizontal"
-                android:orientation="vertical">
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/bitmap_copy" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    style="@style/TextView_Edit_Home_Style2"
-                    android:text="Carlos Roca" />
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center_horizontal"
-                android:orientation="vertical">
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/bitmap_copy_3" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    style="@style/TextView_Edit_Home_Style2"
-                    android:text="Carlos Roca" />
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center_horizontal"
-                android:orientation="vertical">
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/bitmap_copy_4" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    style="@style/TextView_Edit_Home_Style2"
-                    android:text="Carlos Roca" />
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center_horizontal"
-                android:orientation="vertical">
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/bitmap_copy_5" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    style="@style/TextView_Edit_Home_Style2"
-                    android:text="Carlos Roca" />
-            </LinearLayout>
-        </LinearLayout>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            style="@style/TextView_Edit_Home_Style1"
-            android:text="Actividad"
-            app:layout_constraintLeft_toLeftOf="@id/line9"
-            app:layout_constraintTop_toTopOf="@+id/line14" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/montserrat_medium"
-            android:text="Ver más movimientos"
-            android:textColor="#003087"
-            android:textSize="14sp"
-            app:layout_constraintRight_toRightOf="@id/line6"
-            app:layout_constraintTop_toTopOf="@+id/line14" />
-        <androidx.cardview.widget.CardView
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_marginTop="20dp"
-            app:cardCornerRadius="10dp"
-            app:layout_constraintBottom_toTopOf="@+id/line16"
-            app:layout_constraintLeft_toLeftOf="@id/line9"
-            app:layout_constraintRight_toRightOf="@id/line6"
-            app:layout_constraintTop_toTopOf="@id/line15">
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:weightSum="3">
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"
-                    android:orientation="horizontal"
-                    android:weightSum="5">
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="4"
-                        android:orientation="vertical"
-                        android:paddingLeft="20sp"
-                        android:paddingTop="15sp">
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            style="@style/TextView_Edit_Home_Style3"
-                            android:text="El corte inglés" />
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            style="@style/TextView_Edit_Home_Style4"
-                            android:text="Pago aceptado" />
-                    </LinearLayout>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_marginRight="0dp"
-                        android:layout_weight="1"
-                        android:gravity="right|center_vertical"
-                        android:paddingRight="15dp"
-                        android:text="-50€"
-                        android:textColor="#1b1b1b"
-                        android:textSize="16sp" />
-                </LinearLayout>
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="5dp"
-                    android:src="@drawable/custom_line"
-                    android:layerType="software" />
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"
-                    android:orientation="horizontal"
-                    android:weightSum="5">
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="4"
-                        android:orientation="vertical"
-                        android:paddingLeft="20sp"
-                        android:paddingTop="15sp">
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            style="@style/TextView_Edit_Home_Style3"
-                            android:text="Maria Lujan" />
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            style="@style/TextView_Edit_Home_Style4"
-                            android:text="Pago aceptado" />
-                    </LinearLayout>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_marginRight="0dp"
-                        android:layout_weight="1"
-                        android:gravity="right|center_vertical"
-                        android:paddingRight="15dp"
-                        android:text="-50€"
-                        android:textColor="#00c55b"
-                        android:textSize="16sp" />
-                </LinearLayout>
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="5dp"
-                    android:src="@drawable/custom_line"
-                    android:layerType="software" />
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"
-                    android:orientation="horizontal"
-                    android:weightSum="5">
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="4"
-                        android:orientation="vertical"
-                        android:paddingLeft="20sp"
-                        android:paddingTop="15sp">
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            style="@style/TextView_Edit_Home_Style3"
-                            android:text="Maria Lujan" />
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            style="@style/TextView_Edit_Home_Style4"
-                            android:text="Pago aceptado" />
-                    </LinearLayout>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_marginRight="0dp"
-                        android:layout_weight="1"
-                        android:gravity="right|center_vertical"
-                        android:paddingRight="15dp"
-                        android:text="-50€"
-                        android:textColor="#00c55b"
-                        android:textSize="16sp" />
-                </LinearLayout>
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-        <androidx.coordinatorlayout.widget.CoordinatorLayout
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="@id/line16">
-            <com.google.android.material.bottomappbar.BottomAppBar
-                android:id="@+id/Btnt_bar"
-                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="bottom"
-                android:background="@color/white"
-                app:fabCradleRoundedCornerRadius="50dp"
-                app:fabCradleMargin="5dp" >
-                <com.google.android.material.bottomnavigation.BottomNavigationView
-                    android:layout_marginRight="10dp"
-                    android:id="@+id/bottom_NVT"
-                    android:background="@android:color/transparent"
+                app:cardCornerRadius="30dp">
+
+                <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    app:menu="@menu/bottom_menu"/>
-            </com.google.android.material.bottomappbar.BottomAppBar>
+                    android:src="@drawable/bitmap_copy_5" />
+            </androidx.cardview.widget.CardView>
 
-            <com.google.android.material.floatingactionbutton.FloatingActionButton
+            <TextView
+                android:id="@+id/tv_nameInfo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_assignment_returned_black_18_dp_copy"
-                android:backgroundTint="#005ebc"
-                app:maxImageSize="30dp"
-                app:layout_anchor="@id/Btnt_bar" />
-        </androidx.coordinatorlayout.widget.CoordinatorLayout>
-    </androidx.constraintlayout.widget.ConstraintLayout>
+                android:layout_below="@+id/cv_user"
+                android:layout_marginTop="6dp"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="Nina te ha enviado "
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_nameInfo"
+                android:fontFamily="@font/montserrat_semibold"
+                android:text="20,00€"
+                android:textColor="@color/white"
+                android:textSize="28sp" />
+
+            <TextView
+                android:id="@+id/btn_detalles"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_money"
+                android:background="@drawable/custom_detalles"
+                android:fontFamily="@font/montserrat_semibold"
+                android:text="VER DETALLES"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/cv_user"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_Mensaje"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_money"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/btn_detalles"
+                android:text="Mensaje"
+                android:textColor="@color/white"
+                android:textSize="10sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_Mensaje"
+                android:layout_marginLeft="50dp"
+                android:layout_toRightOf="@id/btn_detalles"
+                android:fontFamily="@font/medium"
+                android:text="Por la cena... 🍕"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_money"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_margin="10dp"
+                android:background="@drawable/custom_hoy"
+                android:fontFamily="@font/montserrat_semibold"
+                android:text="Hoy"
+                android:textColor="#000000"
+                android:textSize="10sp" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        style="@style/TextView_Edit_Home_Style1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Enviar de nuevo"
+        app:layout_constraintLeft_toLeftOf="@id/line9"
+        app:layout_constraintTop_toTopOf="@id/line8" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:weightSum="4"
+        app:layout_constraintBottom_toBottomOf="@id/line21"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/line13">
+
+        <LinearLayout
+            android:id="@+id/layout_info"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/bitmap_copy" />
+
+            <TextView
+                style="@style/TextView_Edit_Home_Style2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Carlos Roca" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/bitmap_copy_3" />
+
+            <TextView
+                style="@style/TextView_Edit_Home_Style2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Carlos Roca" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/bitmap_copy_4" />
+
+            <TextView
+                style="@style/TextView_Edit_Home_Style2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Carlos Roca" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/bitmap_copy_5" />
+
+            <TextView
+                style="@style/TextView_Edit_Home_Style2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Carlos Roca" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        style="@style/TextView_Edit_Home_Style1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Actividad"
+        app:layout_constraintLeft_toLeftOf="@id/line9"
+        app:layout_constraintTop_toTopOf="@+id/line14" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_medium"
+        android:text="Ver más movimientos"
+        android:textColor="#003087"
+        android:textSize="14sp"
+        app:layout_constraintRight_toRightOf="@id/line6"
+        app:layout_constraintTop_toTopOf="@+id/line14" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/line16"
+        app:layout_constraintLeft_toLeftOf="@id/line9"
+        app:layout_constraintRight_toRightOf="@id/line6"
+        app:layout_constraintTop_toTopOf="@id/line15">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="3">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:weightSum="5">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="4"
+                    android:orientation="vertical"
+                    android:paddingLeft="20sp"
+                    android:paddingTop="15sp">
+
+                    <TextView
+                        style="@style/TextView_Edit_Home_Style3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="El corte inglés" />
+
+                    <TextView
+                        style="@style/TextView_Edit_Home_Style4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pago aceptado" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="0dp"
+                    android:layout_weight="1"
+                    android:gravity="right|center_vertical"
+                    android:paddingRight="15dp"
+                    android:text="-50€"
+                    android:textColor="#1b1b1b"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layerType="software"
+                android:src="@drawable/custom_line" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:weightSum="5">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="4"
+                    android:orientation="vertical"
+                    android:paddingLeft="20sp"
+                    android:paddingTop="15sp">
+
+                    <TextView
+                        style="@style/TextView_Edit_Home_Style3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Maria Lujan" />
+
+                    <TextView
+                        style="@style/TextView_Edit_Home_Style4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pago aceptado" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="0dp"
+                    android:layout_weight="1"
+                    android:gravity="right|center_vertical"
+                    android:paddingRight="15dp"
+                    android:text="-50€"
+                    android:textColor="#00c55b"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layerType="software"
+                android:src="@drawable/custom_line" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:weightSum="5">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="4"
+                    android:orientation="vertical"
+                    android:paddingLeft="20sp"
+                    android:paddingTop="15sp">
+
+                    <TextView
+                        style="@style/TextView_Edit_Home_Style3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Maria Lujan" />
+
+                    <TextView
+                        style="@style/TextView_Edit_Home_Style4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pago aceptado" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="0dp"
+                    android:layout_weight="1"
+                    android:gravity="right|center_vertical"
+                    android:paddingRight="15dp"
+                    android:text="-50€"
+                    android:textColor="#00c55b"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/line16">
+
+        <com.google.android.material.bottomappbar.BottomAppBar
+            android:id="@+id/Btnt_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@color/white"
+            app:fabCradleMargin="5dp"
+            app:fabCradleRoundedCornerRadius="50dp">
+
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/bottom_NVT"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dp"
+                android:background="@android:color/transparent"
+                app:menu="@menu/bottom_menu" />
+        </com.google.android.material.bottomappbar.BottomAppBar>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#005ebc"
+            android:src="@drawable/ic_assignment_returned_black_18_dp_copy"
+            app:layout_anchor="@id/Btnt_bar"
+            app:maxImageSize="30dp" />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
 
