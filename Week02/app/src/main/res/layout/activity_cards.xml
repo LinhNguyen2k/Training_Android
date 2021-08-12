@@ -209,16 +209,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Mastercard"
-                    android:textColor="#1b1b1b"
-                    android:fontFamily="@font/montserrat_semibold"
-                    android:textSize="16sp"/>
+                    style="@style/TextView_Edit_Card_Style1"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="****9889"
-                    android:textColor="#999999"
-                    android:fontFamily="@font/montserrat_medium"
-                    android:textSize="14sp"/>
+                    style="@style/TextView_Edit_Card_Style2"/>
             </LinearLayout>
             <LinearLayout
 
@@ -296,9 +292,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Visa black"
-                    android:textColor="#1b1b1b"
-                    android:fontFamily="@font/montserrat_semibold"
-                    android:textSize="16sp"/>
+                    style="@style/TextView_Edit_Card_Style1"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -354,16 +348,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Visa black"
-                    android:textColor="#1b1b1b"
-                    android:fontFamily="@font/montserrat_semibold"
-                    android:textSize="16sp"/>
+                    style="@style/TextView_Edit_Card_Style1"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="****8764"
-                    android:textColor="#999999"
-                    android:fontFamily="@font/montserrat_medium"
-                    android:textSize="14sp"/>
+                    style="@style/TextView_Edit_Card_Style2"/>
             </LinearLayout>
             <LinearLayout
                 android:gravity="right|center_vertical"
@@ -420,9 +410,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="****8764"
-                    android:textColor="#999999"
-                    android:fontFamily="@font/montserrat_medium"
-                    android:textSize="14sp"/>
+                    style="@style/TextView_Edit_Card_Style2"/>
             </LinearLayout>
             <LinearLayout
                 android:gravity="right|center_vertical"

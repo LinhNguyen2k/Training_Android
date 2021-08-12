@@ -8,6 +8,8 @@ import kotlinx.android.synthetic.main.activity_pays.*
 
 class Pays : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
+        val actionBar = supportActionBar
+        actionBar!!.hide()
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_pays)
         img_back.setOnClickListener {
