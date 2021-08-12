@@ -9,7 +9,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.MaterialComponents.DayNight.DarkActionBar">
+        android:theme="@style/Theme.MaterialComponents.DayNight.DarkActionBar.Bridge">
         <activity android:name=".Cards"></activity>
         <activity android:name=".Pays" />
         <activity android:name=".Home">
