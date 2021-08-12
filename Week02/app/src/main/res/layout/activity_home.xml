@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
     <androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#f9f9f9"
@@ -127,6 +127,12 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             app:layout_constraintGuide_percent="0.033" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/line21"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.56" />
         <ImageView
             android:layout_width="36dp"
             android:layout_height="36dp"
@@ -190,8 +196,8 @@
                 </androidx.cardview.widget.CardView>
                 <TextView
                     android:id="@+id/tv_nameInfo"
-                    android:layout_width="135dp"
-                    android:layout_height="17dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_marginTop="6dp"
                     android:layout_below="@+id/cv_user"
                     android:fontFamily="@font/montserrat_medium"
@@ -200,19 +206,17 @@
                     android:textSize="14sp" />
                 <TextView
                     android:id="@+id/tv_money"
-                    android:layout_width="120dp"
-                    android:layout_height="34dp"
-                    android:width="330dp"
-                    android:height="19dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_below="@+id/tv_nameInfo"
                     android:fontFamily="@font/montserrat_semibold"
                     android:text="20,00€"
                     android:textColor="@color/white"
                     android:textSize="28sp" />
-                <androidx.appcompat.widget.AppCompatButton
+                <TextView
                     android:id="@+id/btn_detalles"
-                    android:layout_width="132dp"
-                    android:layout_height="30dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:background="@drawable/custom_detalles"
                     android:fontFamily="@font/montserrat_semibold"
                     android:text="VER DETALLES"
@@ -224,8 +228,8 @@
                     app:layout_constraintTop_toTopOf="parent" />
                 <TextView
                     android:id="@+id/tv_Mensaje"
-                    android:layout_width="43dp"
-                    android:layout_height="12dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_below="@id/tv_money"
                     android:layout_marginLeft="50dp"
                     android:layout_marginTop="10dp"
@@ -233,19 +237,19 @@
                     android:text="Mensaje"
                     android:textColor="@color/white"
                     android:textSize="10sp" />
-                <!--                <TextView-->
-                <!--                    android:layout_marginLeft="40dp"-->
-                <!--                    android:layout_width="wrap_content"-->
-                <!--                    android:layout_height="wrap_content"-->
-                <!--                    android:layout_below="@+id/tv_Mensaje"-->
-                <!--                    android:layout_toRightOf="@id/btn_detalles"-->
-                <!--                    android:fontFamily="@font/montserrat_medium"-->
-                <!--&lt;!&ndash;                    android:text="Por la cena... 🍕"&ndash;&gt;-->
-                <!--                    android:textColor="@color/white"-->
-                <!--                    android:textSize="18sp" />-->
-                <androidx.appcompat.widget.AppCompatButton
-                    android:layout_width="52dp"
-                    android:layout_height="22dp"
+                <TextView
+                    android:layout_marginLeft="50dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_Mensaje"
+                    android:layout_toRightOf="@id/btn_detalles"
+                    android:fontFamily="@font/medium"
+                    android:text="Por la cena... 🍕"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_below="@+id/tv_money"
                     android:layout_alignParentTop="true"
                     android:layout_alignParentRight="true"
@@ -258,37 +262,37 @@
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
         <TextView
-            android:layout_width="120dp"
-            android:layout_height="17dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:fontFamily="@font/montserrat_semibold"
+            style="@style/TextView_Edit_Home"
             android:text="Enviar de nuevo"
-            android:textColor="#003087"
-            android:textSize="14sp"
             app:layout_constraintLeft_toLeftOf="@id/line9"
             app:layout_constraintTop_toTopOf="@id/line8" />
         <LinearLayout
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
             android:orientation="horizontal"
             android:weightSum="4"
-            app:layout_constraintLeft_toLeftOf="@id/line9"
-            app:layout_constraintRight_toRightOf="@id/line6"
+            app:layout_constraintBottom_toBottomOf="@id/line21"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="@+id/line13">
             <LinearLayout
+                android:id="@+id/layout_info"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center_horizontal"
                 android:orientation="vertical">
                 <ImageView
-                    android:layout_width="49dp"
-                    android:layout_height="48dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:src="@drawable/bitmap_copy" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="2dp"
+                    android:layout_marginTop="10dp"
                     android:fontFamily="@font/montserrat_semibold"
                     android:text="Carlos Roca"
                     android:textColor="#666666"
@@ -296,18 +300,18 @@
             </LinearLayout>
             <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center_horizontal"
                 android:orientation="vertical">
                 <ImageView
-                    android:layout_width="49dp"
-                    android:layout_height="48dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:src="@drawable/bitmap_copy_3" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="2dp"
+                    android:layout_marginTop="10dp"
                     android:fontFamily="@font/montserrat_semibold"
                     android:text="Carlos Roca"
                     android:textColor="#666666"
@@ -315,18 +319,18 @@
             </LinearLayout>
             <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center_horizontal"
                 android:orientation="vertical">
                 <ImageView
-                    android:layout_width="49dp"
-                    android:layout_height="48dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:src="@drawable/bitmap_copy_4" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="2dp"
+                    android:layout_marginTop="10dp"
                     android:fontFamily="@font/montserrat_semibold"
                     android:text="Carlos Roca"
                     android:textColor="#666666"
@@ -334,18 +338,18 @@
             </LinearLayout>
             <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center_horizontal"
                 android:orientation="vertical">
                 <ImageView
-                    android:layout_width="49dp"
-                    android:layout_height="48dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:src="@drawable/bitmap_copy_5" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="2dp"
+                    android:layout_marginTop="10dp"
                     android:fontFamily="@font/montserrat_semibold"
                     android:text="Carlos Roca"
                     android:textColor="#666666"
@@ -355,10 +359,8 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/montserrat_semibold"
+            style="@style/TextView_Edit_Home"
             android:text="Actividad"
-            android:textColor="#003087"
-            android:textSize="14sp"
             app:layout_constraintLeft_toLeftOf="@id/line9"
             app:layout_constraintTop_toTopOf="@+id/line14" />
         <TextView
@@ -516,7 +518,6 @@
         <androidx.coordinatorlayout.widget.CoordinatorLayout
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_marginTop="30dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
@@ -525,15 +526,19 @@
                 android:id="@+id/Btnt_bar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:fabCradleRoundedCornerRadius="60dp"
-                app:fabCradleMargin="20dp" />
-            <com.google.android.material.bottomnavigation.BottomNavigationView
-                android:id="@+id/bottom_NVT"
-                android:layout_marginTop="20dp"
-                android:background="@android:color/transparent"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:menu="@menu/bottom_menu"/>
+                android:layout_gravity="bottom"
+                android:background="@color/white"
+                app:fabCradleRoundedCornerRadius="50dp"
+                app:fabCradleMargin="5dp" >
+                <com.google.android.material.bottomnavigation.BottomNavigationView
+                    android:layout_marginRight="10dp"
+                    android:id="@+id/bottom_NVT"
+                    android:background="@android:color/transparent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:menu="@menu/bottom_menu"/>
+            </com.google.android.material.bottomappbar.BottomAppBar>
+
             <com.google.android.material.floatingactionbutton.FloatingActionButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -543,4 +548,4 @@
                 app:layout_anchor="@id/Btnt_bar" />
         </androidx.coordinatorlayout.widget.CoordinatorLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
-</layout>
+
