@@ -102,7 +102,6 @@ public class AdapterStudents extends RecyclerView.Adapter<AdapterStudents.Adapte
             }
         });
     }
-
     @Override
     public int getItemCount() {
         if(studentsLists != null){

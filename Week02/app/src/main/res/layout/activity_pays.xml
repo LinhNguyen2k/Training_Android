@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    android:fillViewport="true"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:minHeight="830dp"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
@@ -20,14 +27,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.026" />
+        app:layout_constraintGuide_percent="0.04" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/line3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.15" />
+        app:layout_constraintGuide_percent="0.12" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/line4"
@@ -41,7 +48,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.5" />
+        app:layout_constraintGuide_percent="0.55" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/line6"
@@ -105,7 +112,7 @@
         android:layout_height="0dp"
         android:src="@drawable/ic_group_8"
         app:layout_constraintBottom_toBottomOf="@id/line1"
-        app:layout_constraintLeft_toLeftOf="@id/line4"
+        app:layout_constraintLeft_toLeftOf="@id/line9"
         app:layout_constraintRight_toRightOf="@id/line3"
         app:layout_constraintTop_toTopOf="@id/line2" />
 
@@ -125,7 +132,7 @@
         android:id="@+id/cv_infoUser"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:cardCornerRadius="5dp"
+        app:cardCornerRadius="7dp"
         app:layout_constraintBottom_toBottomOf="@id/line8"
         app:layout_constraintLeft_toLeftOf="@id/line9"
         app:layout_constraintRight_toRightOf="@id/line6"
@@ -135,7 +142,9 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="#f6f8fa"
-            android:padding="25dp"
+            android:paddingLeft="40dp"
+            android:paddingTop="20dp"
+            android:paddingRight="20dp"
             app:layout_constraintLeft_toLeftOf="@id/line9"
             app:layout_constraintRight_toRightOf="@id/line6"
             app:layout_constraintTop_toTopOf="@+id/line7">
@@ -147,8 +156,8 @@
                 app:cardCornerRadius="30dp">
 
                 <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
                     android:src="@drawable/bitmap_copy_5" />
             </androidx.cardview.widget.CardView>
 
@@ -169,27 +178,28 @@
                 android:fontFamily="@font/montserrat_semibold"
                 android:text="davidpaz@correo.com "
                 android:textColor="#999999"
-                android:textSize="12sp" />
+                android:textSize="14sp" />
 
             <TextView
                 android:id="@+id/tv_Mensaje"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/tv_email"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="20dp"
                 android:text="Mensaje"
                 android:textColor="#1b1b1b"
-                android:textSize="10sp" />
+                android:textSize="12sp" />
 
             <TextView
+                android:layout_marginTop="5dp"
                 android:id="@+id/tv_detall"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/tv_Mensaje"
                 android:fontFamily="@font/montserrat_medium"
-                android:text="Este es el dinero de la entradas…"
+                android:text="Este es el dinero de la entradas…🎬"
                 android:textColor="#666666"
-                android:textSize="14sp" />
+                android:textSize="16sp" />
 
             <ImageView
                 android:id="@+id/img_edit"
@@ -208,21 +218,13 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/cv_user"
                 android:layout_alignParentRight="true"
-                android:layout_marginLeft="40dp"
+                android:layout_marginLeft="70dp"
                 android:layout_marginBottom="30dp"
-                android:layout_toRightOf="@+id/tv_email"
                 android:background="@drawable/custom_btn_money"
                 android:fontFamily="@font/montserrat_semibold"
                 android:left="@+id/img_edit"
                 android:text="20,00€" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/tv_Mensaje"
-                android:layout_marginLeft="5dp"
-                android:layout_toRightOf="@id/tv_detall"
-                tools:text="🎬" />
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
 
@@ -267,12 +269,16 @@
                     android:textColor="#1b1b1b"
                     android:textSize="16sp" />
 
-                <ImageView
+                <LinearLayout
+                    android:gravity="right|center_vertical"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_weight="1"
-                    android:src="@drawable/ic_keyboard_arrow_right_black_18_dp_copy_2" />
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_keyboard_arrow_right_black_18_dp_copy_2" />
+                </LinearLayout>
             </LinearLayout>
 
             <ImageView
@@ -325,12 +331,17 @@
                     </LinearLayout>
                 </LinearLayout>
 
-                <ImageView
+                <LinearLayout
+                    android:gravity="right|center_vertical"
                     android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+                    <ImageView
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="right|center_vertical"
-                    android:layout_weight="1"
                     android:src="@drawable/ic_keyboard_arrow_right_black_18_dp_copy_2" />
+                </LinearLayout>
+
             </LinearLayout>
 
             <ImageView
@@ -354,12 +365,16 @@
                     android:gravity="center_vertical"
                     android:text="Tipo de pago " />
 
-                <ImageView
+                <TextView
+                    android:gravity="right"
+                    android:fontFamily="@font/montserrat_semibold"
                     android:layout_width="0dp"
+                    android:textSize="18sp"
+                    android:textColor="#666666"
                     android:layout_height="wrap_content"
                     android:layout_gravity="right|center_vertical"
                     android:layout_weight="1"
-                    android:src="@drawable/ic_keyboard_arrow_right_black_18_dp_copy_2" />
+                    android:text="0,00€ " />
             </LinearLayout>
 
             <ImageView
@@ -389,8 +404,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1.5"
                     android:fontFamily="@font/montserrat_semibold"
-                    android:gravity="center_vertical"
-                    android:text="20,00€"
+                    android:gravity="right"                    android:text="20,00€"
                     android:textColor="#00d090"
                     android:textSize="20sp" />
             </LinearLayout>
@@ -410,3 +424,4 @@
         app:layout_constraintRight_toRightOf="@id/line6"
         app:layout_constraintTop_toTopOf="@id/line12" />
 </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

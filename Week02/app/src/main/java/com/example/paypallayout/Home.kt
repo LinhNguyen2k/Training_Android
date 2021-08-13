@@ -1,6 +1,7 @@
 package com.example.paypallayout
 
 import android.content.Intent
+import android.content.pm.ActivityInfo.*
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_home.*
@@ -11,7 +12,9 @@ class Home : AppCompatActivity() {
         actionBar!!.hide()
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
+        //this.setRequestedOrientation(SCREEN_ORIENTATION_REVERSE_LANDSCAPE);
         bottom_NVT.background = null
+//        tv_fizz.setText("\uD83C\uDFAC")
         layout_info.setOnClickListener {
             val intent: Intent = Intent(applicationContext,Pays::class.java)
             startActivity(intent)
