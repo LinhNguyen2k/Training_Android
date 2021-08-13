@@ -71,13 +71,6 @@
         app:layout_constraintGuide_percent="0.376" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/line9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.0" />
-
-    <androidx.constraintlayout.widget.Guideline
         android:id="@+id/line10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
