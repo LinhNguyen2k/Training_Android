@@ -40,14 +40,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.026" />
+        app:layout_constraintGuide_percent="0.03" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/line5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.89" />
+        app:layout_constraintGuide_percent="0.86" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/line6"
@@ -76,21 +76,6 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.15" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/line11"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.31" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/line12"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.35" />
-
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/line13"
         android:layout_width="wrap_content"
@@ -118,35 +103,6 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.85" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/line17"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.222" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/line18"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.142" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/line19"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.139" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/line20"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.033" />
-
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/line21"
         android:layout_width="wrap_content"
@@ -161,20 +117,22 @@
         app:layout_constraintGuide_percent="0.05" />
 
     <ImageView
+        android:id="@+id/icon_user"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:src="@drawable/bitmap_copy_2"
+        
         app:layout_constraintBottom_toBottomOf="@id/line3"
-        app:layout_constraintLeft_toLeftOf="@id/line22"
+        app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="@id/line10"
         app:layout_constraintTop_toTopOf="@id/line4" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="9dp"
+        android:layout_height="9dp"
         android:backgroundTint="#FF0000"
-        app:layout_constraintBottom_toBottomOf="@id/line20"
-        app:layout_constraintLeft_toLeftOf="@id/line19"
+        android:layout_marginLeft="39dp"
+        app:layout_constraintLeft_toLeftOf="@+id/icon_user"
         app:layout_constraintRight_toRightOf="@id/line10"
         app:layout_constraintTop_toTopOf="@id/line4" />
 
@@ -190,8 +148,8 @@
 
     <ImageView
         android:id="@+id/img_settings"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:src="@drawable/ic_settings_black_18_dp"
         app:layout_constraintBottom_toBottomOf="@id/line3"
         app:layout_constraintLeft_toLeftOf="@id/line5"
@@ -214,7 +172,7 @@
             android:background="@drawable/background_infouser"
             android:paddingLeft="45dp"
             android:paddingTop="20dp"
-            app:layout_constraintLeft_toLeftOf="@id/line9"
+            app:layout_constraintLeft_toLeftOf="@id/line22"
             app:layout_constraintRight_toRightOf="@id/line6"
             app:layout_constraintTop_toTopOf="@+id/line7">
 
@@ -222,7 +180,7 @@
                 android:id="@+id/cv_user"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
-                app:cardCornerRadius="27dp">
+                app:cardCornerRadius="30dp">
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -241,7 +199,6 @@
                 android:textSize="16sp" />
 
             <TextView
-                android:layout_marginTop="5dp"
                 android:id="@+id/tv_money"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -297,7 +254,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/tv_Mensaje"
                     android:fontFamily="@font/lato_black"
-                    android:text="Por la cena...\uD83C\uDFAC"
+                    android:text="Por la cena... 🍕"
                     android:textColor="@color/white"
                     android:textSize="17sp" />
             </LinearLayout>
@@ -309,12 +266,12 @@
                 android:layout_below="@+id/tv_money"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentRight="true"
-                android:layout_margin="10dp"
+                android:layout_marginRight="20dp"
                 android:background="@drawable/custom_hoy"
                 android:fontFamily="@font/montserrat_semibold"
                 android:text="Hoy"
                 android:textColor="#000000"
-                android:textSize="12sp" />
+                android:textSize="13sp" />
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
 
@@ -346,8 +303,8 @@
             android:orientation="vertical">
 
             <ImageView
-                android:layout_width="70dp"
-                android:layout_height="70dp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
                 android:src="@drawable/bitmap_copy" />
 
             <TextView
@@ -366,8 +323,8 @@
             android:orientation="vertical">
 
             <ImageView
-                android:layout_width="70dp"
-                android:layout_height="70dp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
                 android:src="@drawable/bitmap_copy_3" />
 
             <TextView
@@ -385,8 +342,8 @@
             android:orientation="vertical">
 
             <ImageView
-                android:layout_width="70dp"
-                android:layout_height="70dp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
                 android:src="@drawable/bitmap_copy_4" />
 
             <TextView
@@ -404,8 +361,8 @@
             android:orientation="vertical">
 
             <ImageView
-                android:layout_width="70dp"
-                android:layout_height="70dp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
                 android:src="@drawable/bitmap_copy_5" />
 
             <TextView
@@ -492,6 +449,8 @@
             </LinearLayout>
 
             <ImageView
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="18dp"
                 android:layout_width="match_parent"
                 android:layout_height="5dp"
                 android:layerType="software"
@@ -539,6 +498,8 @@
             </LinearLayout>
 
             <ImageView
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="18dp"
                 android:layout_width="match_parent"
                 android:layout_height="5dp"
                 android:layerType="software"
