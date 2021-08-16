@@ -7,9 +7,9 @@
     <stroke android:color="#ffd202"
         android:width="1dp"/>
     <padding
-        android:left="25dp"
+        android:left="23dp"
         android:top="8dp"
-        android:right="25dp"
+        android:right="23dp"
         android:bottom="8dp" >
     </padding>
     <corners

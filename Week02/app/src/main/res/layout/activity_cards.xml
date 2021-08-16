@@ -1,508 +1,366 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<ScrollView
-    android:fillViewport="true"
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:orientation="vertical"
-    android:layout_height="match_parent">
-<androidx.constraintlayout.widget.ConstraintLayout
-    android:minHeight="830dp"
-    android:layout_width="match_parent"
     android:layout_height="match_parent"
-
-    android:background="#f9f9f9">
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/line1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.079" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/line2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.04" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/line3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.13" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/line4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.95" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/line5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.05" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/line7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.13" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/line8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.35" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/line9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.2" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/line10"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.48" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/line11"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.53" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/line12"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.56" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/line13"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.58" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/line14"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.665" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/line15"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.685" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/line16"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.77" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/line17"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.79" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/line18"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.875" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/line19"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.7" />
+    android:fillViewport="true"
+    android:orientation="vertical">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:background="#064B8F"
-        app:layout_constraintBottom_toBottomOf="@id/line8"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f9f9f9"
 
-    <ImageView
-        android:id="@+id/img_back"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:src="@drawable/ic_group_6"
-        app:layout_constraintBottom_toBottomOf="@id/line1"
-        app:layout_constraintLeft_toLeftOf="@id/line5"
-        app:layout_constraintRight_toRightOf="@id/line3"
-        app:layout_constraintTop_toTopOf="@id/line2" />
+        android:minHeight="830dp">
 
-    <TextView
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:fontFamily="@font/montserrat_semibold"
-        android:text="Cuentas bancarias y tarjetas "
-        android:textColor="#ffffff"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@id/line7"
-        app:layout_constraintLeft_toLeftOf="@id/line5"
-        app:layout_constraintRight_toRightOf="@id/line4"
-        app:layout_constraintTop_toTopOf="@id/line1" />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/line1"
+            style="@style/Guideline_horizontal"
+            app:layout_constraintGuide_percent="0.079" />
 
-    <TextView
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:fontFamily="@font/montserrat_medium"
-        android:text="Mantenemos tus datos financieros protegidos para que nadie vea la información confidencial."
-        android:textColor="#ffffff"
-        app:layout_constraintBottom_toBottomOf="@id/line9"
-        app:layout_constraintLeft_toLeftOf="@id/line5"
-        app:layout_constraintRight_toRightOf="@id/line4"
-        app:layout_constraintTop_toTopOf="@id/line7" />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/line2"
+            style="@style/Guideline_horizontal"
+            app:layout_constraintGuide_percent="0.04" />
 
-    <ImageView
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:src="@drawable/ic_group_card"
-        app:layout_constraintBottom_toBottomOf="@id/line10"
-        app:layout_constraintLeft_toLeftOf="@id/line5"
-        app:layout_constraintRight_toRightOf="@id/line4"
-        app:layout_constraintTop_toTopOf="@id/line9" />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/line3"
+            style="@style/Guideline_vertical"
+            app:layout_constraintGuide_percent="0.13" />
 
-    <TextView
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:fontFamily="@font/montserrat_semibold"
-        android:text="Mis tarjetas"
-        android:textColor="#001d50"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="@id/line12"
-        app:layout_constraintLeft_toLeftOf="@id/line5"
-        app:layout_constraintRight_toRightOf="@id/line4"
-        app:layout_constraintTop_toTopOf="@id/line11" />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/line4"
+            style="@style/Guideline_vertical"
+            app:layout_constraintGuide_percent="0.95" />
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="@id/line14"
-        app:layout_constraintLeft_toLeftOf="@id/line5"
-        app:layout_constraintRight_toRightOf="@id/line4"
-        app:layout_constraintTop_toTopOf="@id/line13">
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/line5"
+            style="@style/Guideline_vertical"
+            app:layout_constraintGuide_percent="0.05" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/line7"
+            style="@style/Guideline_horizontal"
+            app:layout_constraintGuide_percent="0.13" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/line8"
+            style="@style/Guideline_horizontal"
+            app:layout_constraintGuide_percent="0.35" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/line9"
+            style="@style/Guideline_horizontal"
+            app:layout_constraintGuide_percent="0.2" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/line10"
+            style="@style/Guideline_horizontal"
+            app:layout_constraintGuide_percent="0.48" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/line11"
+            style="@style/Guideline_horizontal"
+            app:layout_constraintGuide_percent="0.53" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/line12"
+            style="@style/Guideline_horizontal"
+            app:layout_constraintGuide_percent="0.56" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/line13"
+            style="@style/Guideline_horizontal"
+            app:layout_constraintGuide_percent="0.58" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/line14"
+            style="@style/Guideline_horizontal"
+            app:layout_constraintGuide_percent="0.665" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/line15"
+            style="@style/Guideline_horizontal"
+            app:layout_constraintGuide_percent="0.685" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/line16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:weightSum="4">
+            app:layout_constraintGuide_percent="0.77" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/line17"
+            style="@style/Guideline_horizontal"
+            app:layout_constraintGuide_percent="0.79" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/line18"
+            style="@style/Guideline_horizontal"
+            app:layout_constraintGuide_percent="0.875" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/line19"
+            style="@style/Guideline_vertical"
+            app:layout_constraintGuide_percent="0.7" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            style="@style/layout_zero"
+            android:background="#064B8F"
+            app:layout_constraintBottom_toBottomOf="@id/line8"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_group_6"
+            app:layout_constraintLeft_toLeftOf="@id/line5"
+            app:layout_constraintTop_toTopOf="@id/line2" />
+
+        <TextView
+            style="@style/layout_zero"
+            android:fontFamily="@font/montserrat_semibold"
+            android:gravity="center_vertical"
+            android:text="Cuentas bancarias y tarjetas "
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@id/line7"
+            app:layout_constraintLeft_toLeftOf="@id/line5"
+            app:layout_constraintRight_toRightOf="@id/line4"
+            app:layout_constraintTop_toTopOf="@id/line1" />
+
+        <TextView
+            style="@style/layout_zero"
+            android:fontFamily="@font/montserrat_medium"
+            android:text="Mantenemos tus datos financieros protegidos para que nadie vea la información confidencial."
+            android:textColor="#ffffff"
+            app:layout_constraintBottom_toBottomOf="@id/line9"
+            app:layout_constraintLeft_toLeftOf="@id/line5"
+            app:layout_constraintRight_toRightOf="@id/line4"
+            app:layout_constraintTop_toTopOf="@id/line7" />
+
+        <ImageView
+            style="@style/layout_zero"
+            android:minWidth="300dp"
+            android:src="@drawable/ic_group_card"
+            app:layout_constraintBottom_toBottomOf="@id/line10"
+            app:layout_constraintLeft_toLeftOf="@id/line5"
+            app:layout_constraintRight_toRightOf="@id/line4"
+            app:layout_constraintTop_toTopOf="@id/line9" />
+
+        <TextView
+            style="@style/layout_zero"
+            android:fontFamily="@font/montserrat_semibold"
+            android:text="Mis tarjetas"
+            android:textColor="#001d50"
+            android:textSize="17sp"
+            app:layout_constraintBottom_toBottomOf="@id/line12"
+            app:layout_constraintLeft_toLeftOf="@id/line5"
+            app:layout_constraintRight_toRightOf="@id/line4"
+            app:layout_constraintTop_toTopOf="@id/line11" />
+
+        <androidx.cardview.widget.CardView
+            style="@style/layout_zero"
+            app:cardCornerRadius="7dp"
+            app:layout_constraintBottom_toBottomOf="@id/line14"
+            app:layout_constraintLeft_toLeftOf="@id/line5"
+            app:layout_constraintRight_toRightOf="@id/line4"
+            app:layout_constraintTop_toTopOf="@id/line13">
 
             <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center">
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/ic_mastercard_2" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1.5"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <TextView
-                    style="@style/TextView_Edit_Card_Style1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Mastercard" />
-
-                <TextView
-                    style="@style/TextView_Edit_Card_Style2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="****9889" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:gravity="right"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1.5"
+                style="@style/layout_match_parent"
                 android:orientation="horizontal"
-                android:weightSum="3">
+                android:weightSum="4">
 
                 <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.7"
-                    android:background="@drawable/custom_create"
+                    style="@style/layout_width_zero"
+                    android:layout_weight="1"
                     android:gravity="center">
 
                     <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/ic_create_black_18_dp_2" />
+                        style="@style/layout_default"
+                        android:src="@drawable/ic_mastercard_2" />
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.7"
-                    android:background="@drawable/custom_delete"
-                    android:gravity="center">
+                    style="@style/layout_width_zero"
+                    android:layout_weight="1.5"
+                    android:gravity="center"
+                    android:orientation="vertical">
 
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/ic_delete_outline_black_18_dp" />
+                    <TextView
+                        style="@style/TextView_Edit_Card_Style1"
+                        android:text="Mastercard" />
+
+                    <TextView
+                        style="@style/TextView_Edit_Card_Style2"
+                        android:text="****9889" />
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.7"
-                    android:background="@drawable/custom_path"
+                    style="@style/layout_width_zero"
+                    android:layout_weight="1.5"
+                    android:gravity="right"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <LinearLayout
+                        style="@style/layout_width_zero"
+                        android:layout_weight="0.8"
+                        android:background="@drawable/custom_create"
+                        android:gravity="center">
+
+                        <ImageView
+                            style="@style/layout_default"
+                            android:src="@drawable/ic_create_black_18_dp_2" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/layout_width_zero"
+                        android:layout_weight="0.8"
+                        android:background="@drawable/custom_delete"
+                        android:gravity="center">
+
+                        <ImageView
+                            style="@style/layout_default"
+                            android:src="@drawable/ic_delete_outline_black_18_dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/layout_width_zero"
+                        android:layout_weight="0.8"
+                        android:background="@drawable/custom_path"
+                        android:gravity="center">
+
+                        <ImageView
+                            style="@style/layout_default"
+                            android:src="@drawable/ic_path" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            style="@style/layout_zero"
+            app:cardCornerRadius="7dp"
+            app:layout_constraintBottom_toBottomOf="@id/line16"
+            app:layout_constraintLeft_toLeftOf="@id/line5"
+            app:layout_constraintRight_toRightOf="@id/line4"
+            app:layout_constraintTop_toTopOf="@id/line15">
+
+            <LinearLayout
+                style="@style/layout_match_parent"
+                android:orientation="horizontal"
+                android:weightSum="4">
+
+                <LinearLayout
+                    style="@style/layout_width_zero"
+                    android:layout_weight="1"
                     android:gravity="center">
 
                     <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/ic_path" />
+                        style="@style/layout_default"
+                        android:src="@drawable/ic_combined_shape" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/layout_width_zero"
+                    android:layout_weight="1.5"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/TextView_Edit_Card_Style1"
+                        android:text="Visa black" />
+
+                    <TextView
+                        style="@style/TextView_Edit_Card_Style2"
+                        android:text="****8764" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/layout_width_zero"
+                    android:layout_weight="1.5"
+                    android:gravity="right|center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        style="@style/layout_default"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/ic_more_vert_black_18_dp" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            style="@style/layout_zero"
+            app:cardCornerRadius="7dp"
+            app:layout_constraintBottom_toBottomOf="@id/line18"
+            app:layout_constraintLeft_toLeftOf="@id/line5"
+            app:layout_constraintRight_toRightOf="@id/line4"
+            app:layout_constraintTop_toTopOf="@id/line17">
+
+            <LinearLayout
+                style="@style/layout_match_parent"
+                android:orientation="horizontal"
+                android:weightSum="4">
+
+                <LinearLayout
+                    style="@style/layout_width_zero"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <ImageView
+                        style="@style/layout_default"
+                        android:src="@drawable/ic_combined_shape" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/layout_width_zero"
+                    android:layout_weight="1.5"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/TextView_Edit_Card_Style1"
+                        android:text="Visa black" />
+
+                    <TextView
+                        style="@style/TextView_Edit_Card_Style2"
+                        android:text="****8764" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/layout_width_zero"
+                    android:layout_weight="1.5"
+                    android:gravity="right|center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        style="@style/layout_default"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/ic_more_vert_black_18_dp" />
                 </LinearLayout>
             </LinearLayout>
+        </androidx.cardview.widget.CardView>
 
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="@id/line16"
-        app:layout_constraintLeft_toLeftOf="@id/line5"
-        app:layout_constraintRight_toRightOf="@id/line4"
-        app:layout_constraintTop_toTopOf="@id/line15">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:weightSum="4">
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center">
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/ic_combined_shape" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1.5"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <TextView
-                    style="@style/TextView_Edit_Card_Style1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Visa black" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/montserrat_medium"
-                    android:text="****8764"
-                    android:textColor="#999999"
-                    android:textSize="14sp" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1.5"
-                android:gravity="right|center_vertical"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="10dp"
-                    android:src="@drawable/ic_more_vert_black_18_dp" />
-            </LinearLayout>
-
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="@id/line18"
-        app:layout_constraintLeft_toLeftOf="@id/line5"
-        app:layout_constraintRight_toRightOf="@id/line4"
-        app:layout_constraintTop_toTopOf="@id/line17">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:weightSum="4">
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center">
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/ic_combined_shape" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1.5"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <TextView
-                    style="@style/TextView_Edit_Card_Style1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Visa black" />
-
-                <TextView
-                    style="@style/TextView_Edit_Card_Style2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="****8764" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1.5"
-                android:gravity="right|center_vertical"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="10dp"
-                    android:src="@drawable/ic_more_vert_black_18_dp" />
-            </LinearLayout>
-
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="@id/line16"
-        app:layout_constraintLeft_toLeftOf="@id/line5"
-        app:layout_constraintRight_toRightOf="@id/line4"
-        app:layout_constraintTop_toTopOf="@id/line15">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:weightSum="4">
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center">
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/ic_combined_shape" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1.5"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/montserrat_semibold"
-                    android:text="Visa black"
-                    android:textColor="#1b1b1b"
-                    android:textSize="16sp" />
-
-                <TextView
-                    style="@style/TextView_Edit_Card_Style2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="****8764" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1.5"
-                android:gravity="right|center_vertical"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="10dp"
-                    android:src="@drawable/ic_more_vert_black_18_dp" />
-            </LinearLayout>
-
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_add_black_18_dp"
-        app:backgroundTint="#1836A5"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintRight_toRightOf="@id/line4"
-        app:layout_constraintTop_toTopOf="@id/line18" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            style="@style/layout_default"
+            android:src="@drawable/ic_add_black_18_dp"
+            app:backgroundTint="#1836A5"
+            app:fabCustomSize="65dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="@id/line4"
+            app:layout_constraintTop_toTopOf="@id/line18" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

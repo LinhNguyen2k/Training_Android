@@ -2,17 +2,18 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/user"
-        android:title="Enviar"
-        android:icon="@drawable/ic_shape"
+        android:id="@+id/enviar"
+        android:title="Perfil"
+        android:icon="@drawable/ic_assignment_returned_black_18_dp"
         app:showAsAction="ifRoom"/>
     <item
         android:id="@+id/recibir"
         android:title="Recibir"
         app:showAsAction="ifRoom"/>
+
     <item
-        android:id="@+id/enviar"
-        android:title="Perfil"
-        android:icon="@drawable/ic_assignment_returned_black_18_dp"
+        android:id="@+id/user"
+        android:title="Enviar"
+        android:icon="@drawable/ic_shape"
         app:showAsAction="ifRoom"/>
 </menu>
