@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/layout_RelativeLayout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <LinearLayout
+        android:background="#D5E1D5"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:id="@+id/layout_LinearLayout">
+        <TextView
+            android:textColor="#DC4618"
+            android:text="0"
+            android:textSize="50sp"
+            android:gravity="center"
+            android:id="@+id/tv_result"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+    <LinearLayout
+        android:weightSum="2"
+        android:layout_marginTop="3dp"
+        android:layout_below="@id/layout_LinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <androidx.appcompat.widget.AppCompatButton
+            android:background="@drawable/custom_button"
+            android:layout_weight="1"
+            android:textColor="#DC4618"
+            android:id="@+id/btn_subtraction"
+            android:text="-"
+            android:layout_margin="3dp"
+            android:textSize="40sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:background="@drawable/custom_button"
+            android:layout_margin="3dp"
+            android:layout_weight="1"
+            android:textColor="#DC4618"
+            android:id="@+id/btn_addition"
+            android:text="+"
+            android:textSize="40sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+
+</RelativeLayout>
