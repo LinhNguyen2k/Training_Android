@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignUp">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/line1"
+        style="@style/Guideline_horizontal"
+        app:layout_constraintGuide_percent="0.04" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/line2"
+        style="@style/Guideline_horizontal"
+        app:layout_constraintGuide_percent="0.14" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/line3"
+        style="@style/Guideline_horizontal"
+        app:layout_constraintGuide_percent="0.57" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/line4"
+        style="@style/Guideline_horizontal"
+        app:layout_constraintGuide_percent="0.3"/>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/line5"
+        style="@style/Guideline_vertical"
+        app:layout_constraintGuide_percent="0.15"/>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/line6"
+        style="@style/Guideline_vertical"
+        app:layout_constraintGuide_percent="0.85"/>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/line7"
+        style="@style/Guideline_horizontal"
+        app:layout_constraintGuide_percent="0.6" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/line8"
+        style="@style/Guideline_horizontal"
+        app:layout_constraintGuide_percent="0.67" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/line9"
+        style="@style/Guideline_horizontal"
+        app:layout_constraintGuide_percent="0.69" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/line10"
+        style="@style/Guideline_horizontal"
+        app:layout_constraintGuide_percent="0.76" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/line11"
+        style="@style/Guideline_horizontal"
+        app:layout_constraintGuide_percent="0.78" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/line12"
+        style="@style/Guideline_horizontal"
+        app:layout_constraintGuide_percent="0.85" />
+    <ImageView
+        android:id="@+id/img_logo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/ic_illustration"
+        app:layout_constraintBottom_toBottomOf="@id/line4"
+        app:layout_constraintLeft_toLeftOf="@id/line5"
+        app:layout_constraintRight_toRightOf="@id/line6"
+        app:layout_constraintTop_toTopOf="@id/line1" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_componente_7_1"
+        app:layout_constraintBottom_toBottomOf="@id/line3"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/line2"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/tv_tradix"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TRADIX"
+        android:textSize="40sp"
+        android:textColor="#2b2828"
+        android:textStyle="normal"
+        android:fontFamily="@font/raleway_black"
+        app:layout_constraintLeft_toLeftOf="@id/line5"
+        app:layout_constraintRight_toRightOf="@id/line6"
+        app:layout_constraintTop_toTopOf="@id/line4"
+        app:layout_constraintBottom_toBottomOf="@id/line3"
+        app:layout_constraintVertical_bias="0.3" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_coin"
+        android:layout_marginLeft="12dp"
+        app:layout_constraintVertical_bias="0.32"
+        app:layout_constraintBottom_toBottomOf="@id/line3"
+        app:layout_constraintLeft_toRightOf="@id/tv_tradix"
+        app:layout_constraintTop_toTopOf="@id/line4" />
+
+    <TextView
+        android:id="@+id/tv_trading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="The future of trading"
+        android:textColor="#171717"
+        android:textSize="24sp"
+        android:textStyle="normal"
+        android:fontFamily="@font/lato_light"
+        app:layout_constraintTop_toBottomOf="@id/tv_tradix"
+        app:layout_constraintLeft_toLeftOf="@id/line5"
+        app:layout_constraintRight_toRightOf="@id/line6" />
+
+    <TextView
+        android:id="@+id/tv_welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/raleway_black"
+        android:text="Create a free account"
+        android:textSize="27sp"
+        android:textStyle="normal"
+        app:layout_constraintVertical_bias="0.9"
+        app:layout_constraintBottom_toBottomOf="@id/line3"
+        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintLeft_toLeftOf="@id/line5"
+        app:layout_constraintRight_toRightOf="@id/line6"
+        app:layout_constraintTop_toBottomOf="@id/tv_trading" />
+    <EditText
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:paddingLeft="30dp"
+        android:textColor="#9d9d9d"
+        app:layout_constraintLeft_toLeftOf="@id/line5"
+        app:layout_constraintRight_toRightOf="@id/line6"
+        app:layout_constraintTop_toTopOf="@id/line7"
+        app:layout_constraintBottom_toBottomOf="@id/line8"
+        android:background="@drawable/custom_text_input"
+        android:hint="E-mail"/>
+    <EditText
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:paddingLeft="30dp"
+        android:textColor="#9d9d9d"
+        app:layout_constraintLeft_toLeftOf="@id/line5"
+        app:layout_constraintRight_toRightOf="@id/line6"
+        app:layout_constraintTop_toTopOf="@id/line9"
+        app:layout_constraintBottom_toBottomOf="@id/line10"
+        android:background="@drawable/custom_text_input"
+        android:hint="Password"/>
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="SIGN UP"
+        android:textSize="17sp"
+        android:textColor="#ffffff"
+        android:textStyle="normal"
+        android:fontFamily="@font/lato_black"
+        app:layout_constraintLeft_toLeftOf="@id/line5"
+        app:layout_constraintRight_toRightOf="@id/line6"
+        app:layout_constraintTop_toTopOf="@id/line11"
+        app:layout_constraintBottom_toBottomOf="@id/line12"
+        android:background="@drawable/custom_login_button"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Forgot Password?"
+        android:textSize="16sp"
+        android:textColor="#7E7D7D"
+        android:textStyle="normal"
+        android:fontFamily="@font/lato_light"
+        app:layout_constraintLeft_toLeftOf="@id/line5"
+        app:layout_constraintTop_toTopOf="@id/line12"
+        app:layout_constraintRight_toRightOf="@id/line6"
+        app:layout_constraintHorizontal_bias="0.08"
+        android:layout_marginTop="10dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:textStyle="normal"
+        android:textSize="16sp"
+        android:textColor="#737373"
+        android:fontFamily="@font/lato_regular"
+        app:layout_constraintLeft_toLeftOf="@id/line5"
+        app:layout_constraintTop_toTopOf="@id/line12"
+        app:layout_constraintRight_toRightOf="@id/line6"
+        app:layout_constraintHorizontal_bias="0.93"
+        android:layout_marginTop="10dp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
