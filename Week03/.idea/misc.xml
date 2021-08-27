@@ -4,7 +4,9 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Code/Android_2021/Training/Week03/app/src/main/res/drawable-hdpi/custom_login_button_resend_email.xml" value="0.290625" />
+        <entry key="..\:/Code/Android_2021/Training/Week03/app/src/main/res/drawable-v24/custom_layout_home_list1.xml" value="0.28615384615384615" />
         <entry key="..\:/Code/Android_2021/Training/Week03/app/src/main/res/drawable-v24/custom_login_button.xml" value="0.26666666666666666" />
+        <entry key="..\:/Code/Android_2021/Training/Week03/app/src/main/res/drawable-v24/custom_radius_info1.xml" value="0.28615384615384615" />
         <entry key="..\:/Code/Android_2021/Training/Week03/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.290625" />
         <entry key="..\:/Code/Android_2021/Training/Week03/app/src/main/res/drawable/custom_load.xml" value="0.290625" />
         <entry key="..\:/Code/Android_2021/Training/Week03/app/src/main/res/drawable/custom_load_radius.xml" value="0.290625" />
@@ -20,11 +22,13 @@
         <entry key="..\:/Code/Android_2021/Training/Week03/app/src/main/res/drawable/ic_launcher_background.xml" value="0.290625" />
         <entry key="..\:/Code/Android_2021/Training/Week03/app/src/main/res/layout/activity_confirm_password.xml" value="0.24320652173913043" />
         <entry key="..\:/Code/Android_2021/Training/Week03/app/src/main/res/layout/activity_email.xml" value="0.2" />
+        <entry key="..\:/Code/Android_2021/Training/Week03/app/src/main/res/layout/activity_home.xml" value="0.2341485507246377" />
         <entry key="..\:/Code/Android_2021/Training/Week03/app/src/main/res/layout/activity_login.xml" value="0.176" />
         <entry key="..\:/Code/Android_2021/Training/Week03/app/src/main/res/layout/activity_main.xml" value="0.21014492753623187" />
         <entry key="..\:/Code/Android_2021/Training/Week03/app/src/main/res/layout/activity_on_boarding2.xml" value="0.264" />
         <entry key="..\:/Code/Android_2021/Training/Week03/app/src/main/res/layout/activity_on_boarding3.xml" value="0.6" />
         <entry key="..\:/Code/Android_2021/Training/Week03/app/src/main/res/layout/activity_sign_up.xml" value="0.21014492753623187" />
+        <entry key="..\:/Code/Android_2021/Training/Week03/app/src/main/res/layout/custom_home_list1.xml" value="1.0" />
         <entry key="..\:/Code/Android_2021/Training/Week03/app/src/main/res/layout/fragment_on_boarding1.xml" value="0.264" />
       </map>
     </option>

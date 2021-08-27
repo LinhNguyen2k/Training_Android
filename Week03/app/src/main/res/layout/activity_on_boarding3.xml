@@ -114,6 +114,7 @@
         android:text="Ex totam praesentium incidunt aut."/>
     <View
         android:id="@+id/view_1"
+        android:layout_marginTop="1dp"
         app:layout_constraintTop_toTopOf="@id/line8"
         app:layout_constraintLeft_toLeftOf="@id/line6"
         android:background="@drawable/custom_load_radius"
