@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Email">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/line1"
+        style="@style/Guideline_horizontal"
+        app:layout_constraintGuide_percent="0.29" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/line3"
+        style="@style/Guideline_horizontal"
+        app:layout_constraintGuide_percent="0.43" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/line4"
+        style="@style/Guideline_horizontal"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/line5"
+        style="@style/Guideline_vertical"
+        app:layout_constraintGuide_percent="0.2" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/line6"
+        style="@style/Guideline_vertical"
+        app:layout_constraintGuide_percent="0.8" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/line8"
+        style="@style/Guideline_horizontal"
+        app:layout_constraintGuide_percent="0.64" />
+
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_componente_7_3"
+        app:layout_constraintBottom_toBottomOf="@id/line3"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/tv_tradix"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/raleway_black"
+        android:text="TRADIX"
+        android:textColor="#2b2828"
+        android:textSize="40sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="@id/line3"
+        app:layout_constraintLeft_toLeftOf="@id/line5"
+        app:layout_constraintRight_toRightOf="@id/line6"
+        app:layout_constraintTop_toTopOf="@id/line4"
+        app:layout_constraintVertical_bias="0.3" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:src="@drawable/ic_coin"
+        app:layout_constraintBottom_toBottomOf="@id/line3"
+        app:layout_constraintLeft_toRightOf="@id/tv_tradix"
+        app:layout_constraintTop_toTopOf="@id/line4"
+        app:layout_constraintVertical_bias="0.32" />
+
+    <TextView
+        android:id="@+id/tv_trading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lato_light"
+        android:text="The future of trading"
+        android:textColor="#171717"
+        android:textSize="24sp"
+        android:textStyle="normal"
+        app:layout_constraintLeft_toLeftOf="@id/line5"
+        app:layout_constraintRight_toRightOf="@id/line6"
+        app:layout_constraintTop_toBottomOf="@id/tv_tradix" />
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/ic_pixeltrue_newsletter"
+        app:layout_constraintTop_toTopOf="@id/line1"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/line8"
+        android:scaleType="fitXY"/>
+    <TextView
+        android:id="@+id/tv_start"
+        android:fontFamily="@font/raleway_black"
+        android:textSize="22sp"
+        android:textColor="#656565"
+        app:layout_constraintLeft_toLeftOf="@id/line5"
+        app:layout_constraintTop_toTopOf="@id/line8"
+        app:layout_constraintRight_toRightOf="@id/line6"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="We have sent you an"/>
+
+    <TextView
+        android:id="@+id/tv_future"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/raleway_black"
+        android:textColor="#656565"
+        android:textSize="22sp"
+        app:layout_constraintLeft_toLeftOf="@id/line5"
+        app:layout_constraintRight_toRightOf="@id/line6"
+        app:layout_constraintTop_toBottomOf="@id/tv_start"
+        android:text="email to change your" />
+
+    <TextView
+        android:id="@+id/tv_incidunt"
+        android:textColor="#656565"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/raleway_black"
+        android:textSize="22sp"
+        app:layout_constraintLeft_toLeftOf="@id/line5"
+        app:layout_constraintRight_toRightOf="@id/line6"
+        app:layout_constraintTop_toBottomOf="@id/tv_future"
+        android:text="password"/>
+    <TextView
+        android:id="@+id/tv_resendEmail"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:layout_width="0dp"
+        android:textSize="14sp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_incidunt"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/line5"
+        app:layout_constraintRight_toRightOf="@id/line6"
+        app:layout_constraintVertical_bias="0.2"
+        android:text="RESEND EMAIL"
+        android:background="@drawable/custom_login_button"/>
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Wait 30 seconds before sending it"
+    app:layout_constraintLeft_toLeftOf="@id/line5"
+    app:layout_constraintRight_toRightOf="@id/line6"
+    app:layout_constraintTop_toBottomOf="@id/tv_resendEmail"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintVertical_bias="0.15"
+    android:textSize="14sp"
+    android:textColor="#3e3e3e"
+    android:fontFamily="@font/lato_light"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
