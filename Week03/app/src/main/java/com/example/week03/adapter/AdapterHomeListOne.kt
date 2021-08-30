@@ -37,7 +37,7 @@ class AdapterHomeListOne(private val listInfoOne : ArrayList<InfoHomeOne> , priv
 
         }else{
             holder.name.setTextColor(Color.BLACK)
-            holder.name.setBackgroundResource(R.drawable.custom_radius_info1)
+            holder.name.setBackgroundColor(ContextCompat.getColor(context,R.color.white_two))
         }
 
     }
