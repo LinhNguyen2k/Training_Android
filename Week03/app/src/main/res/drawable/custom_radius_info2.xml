@@ -8,10 +8,10 @@
         android:color="#2bfeba" >
 
     </solid>
-    <padding android:left="10dp"
+    <padding android:left="13dp"
         android:top="5dp"
         android:bottom="5dp"
-        android:right="10dp"></padding>
+        android:right="13dp"></padding>
     <corners
         android:radius="30dp" >
     </corners>
