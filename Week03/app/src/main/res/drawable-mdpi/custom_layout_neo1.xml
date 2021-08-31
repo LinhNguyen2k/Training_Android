@@ -5,8 +5,8 @@
         <shape xmlns:android="http://schemas.android.com/apk/res/android"
             android:shape="rectangle">
             <padding
-                android:left="25dp"
-                android:right="25dp"
+                android:left="27dp"
+                android:right="27dp"
                 android:top="15dp"
                 android:bottom="15dp"
                 >
@@ -16,8 +16,8 @@
 
             <gradient
                 android:type="linear"
-                android:startColor="#a632e4"
-                android:endColor="#2525fc"
+                android:startColor="#CD54BF"
+                android:endColor="#370bf0"
                 android:angle="90" />
         </shape>
 

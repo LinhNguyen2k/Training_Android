@@ -7,12 +7,14 @@
         <entry key="..\:/Code/Android_2021/Training/Week03/app/src/main/res/drawable-mdpi/custom_layout_coin1.xml" value="0.28307692307692306" />
         <entry key="..\:/Code/Android_2021/Training/Week03/app/src/main/res/drawable-mdpi/custom_layout_coin2.xml" value="0.28307692307692306" />
         <entry key="..\:/Code/Android_2021/Training/Week03/app/src/main/res/drawable-mdpi/custom_layout_neo1.xml" value="0.28307692307692306" />
+        <entry key="..\:/Code/Android_2021/Training/Week03/app/src/main/res/drawable-mdpi/custom_layout_new_article1.xml" value="0.28307692307692306" />
         <entry key="..\:/Code/Android_2021/Training/Week03/app/src/main/res/drawable-v24/custom_layout_home_list1.xml" value="0.28615384615384615" />
         <entry key="..\:/Code/Android_2021/Training/Week03/app/src/main/res/drawable-v24/custom_login_button.xml" value="0.26666666666666666" />
         <entry key="..\:/Code/Android_2021/Training/Week03/app/src/main/res/drawable-v24/custom_radius_info1.xml" value="0.28615384615384615" />
         <entry key="..\:/Code/Android_2021/Training/Week03/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.290625" />
         <entry key="..\:/Code/Android_2021/Training/Week03/app/src/main/res/drawable-xhdpi/custom_layout_nav.xml" value="0.28307692307692306" />
         <entry key="..\:/Code/Android_2021/Training/Week03/app/src/main/res/drawable/custom_layout_nav.xml" value="0.28307692307692306" />
+        <entry key="..\:/Code/Android_2021/Training/Week03/app/src/main/res/drawable/custom_layout_news.xml" value="0.28307692307692306" />
         <entry key="..\:/Code/Android_2021/Training/Week03/app/src/main/res/drawable/custom_load.xml" value="0.290625" />
         <entry key="..\:/Code/Android_2021/Training/Week03/app/src/main/res/drawable/custom_load_radius.xml" value="0.290625" />
         <entry key="..\:/Code/Android_2021/Training/Week03/app/src/main/res/drawable/custom_login_button.xml" value="0.26666666666666666" />
@@ -36,7 +38,7 @@
         <entry key="..\:/Code/Android_2021/Training/Week03/app/src/main/res/drawable/ic_tracciato_865.xml" value="0.28307692307692306" />
         <entry key="..\:/Code/Android_2021/Training/Week03/app/src/main/res/layout/activity_confirm_password.xml" value="0.24320652173913043" />
         <entry key="..\:/Code/Android_2021/Training/Week03/app/src/main/res/layout/activity_email.xml" value="0.2" />
-        <entry key="..\:/Code/Android_2021/Training/Week03/app/src/main/res/layout/activity_home.xml" value="0.2" />
+        <entry key="..\:/Code/Android_2021/Training/Week03/app/src/main/res/layout/activity_home.xml" value="0.264" />
         <entry key="..\:/Code/Android_2021/Training/Week03/app/src/main/res/layout/activity_login.xml" value="0.176" />
         <entry key="..\:/Code/Android_2021/Training/Week03/app/src/main/res/layout/activity_main.xml" value="0.21014492753623187" />
         <entry key="..\:/Code/Android_2021/Training/Week03/app/src/main/res/layout/activity_on_boarding2.xml" value="0.264" />
@@ -45,7 +47,9 @@
         <entry key="..\:/Code/Android_2021/Training/Week03/app/src/main/res/layout/custom_home_list1.xml" value="1.0" />
         <entry key="..\:/Code/Android_2021/Training/Week03/app/src/main/res/layout/custom_home_list2.xml" value="0.536" />
         <entry key="..\:/Code/Android_2021/Training/Week03/app/src/main/res/layout/fragment_coin.xml" value="0.264" />
+        <entry key="..\:/Code/Android_2021/Training/Week03/app/src/main/res/layout/fragment_news.xml" value="0.26422764227642276" />
         <entry key="..\:/Code/Android_2021/Training/Week03/app/src/main/res/layout/fragment_on_boarding1.xml" value="0.264" />
+        <entry key="..\:/Code/Android_2021/Training/Week03/app/src/main/res/layout/news_article.xml" value="0.35182679296346414" />
         <entry key="..\:/Code/Android_2021/Training/Week03/app/src/main/res/menu/menu.xml" value="0.2713541666666667" />
       </map>
     </option>
