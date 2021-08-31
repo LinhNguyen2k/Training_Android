@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/line1"
+        style="@style/Guideline_horizontal"
+        app:layout_constraintGuide_percent="0.22" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/line2"
+        style="@style/Guideline_horizontal"
+        app:layout_constraintGuide_percent="0.06" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/line3"
+        style="@style/Guideline_vertical"
+        app:layout_constraintGuide_percent="0.95" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/line4"
+        style="@style/Guideline_horizontal"
+        app:layout_constraintGuide_percent="0.12" />
+
+    <View
+        android:id="@+id/view_back"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:background="@drawable/icons_8_expand_arrow"
+        app:layout_constraintHorizontal_bias="0.07"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/line2" />
+
+    <TextView
+        android:id="@+id/tv_neo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:fontFamily="@font/raleway_black"
+        android:text="MENU"
+        android:textColor="#1d1d1d"
+        android:textSize="22sp"
+        app:layout_constraintLeft_toRightOf="@id/view_back"
+        app:layout_constraintTop_toTopOf="@id/view_back" />
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_componente_6_2"
+        app:layout_constraintBottom_toBottomOf="@id/line1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/custom_layout_home_list1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/line4"
+        app:layout_constraintVertical_bias="0.0">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/line5"
+            style="@style/Guideline_vertical"
+            app:layout_constraintGuide_percent="0.05" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/line6"
+            style="@style/Guideline_vertical"
+            app:layout_constraintGuide_percent="0.95" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/line7"
+            style="@style/Guideline_horizontal"
+            app:layout_constraintGuide_percent="0.111" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/line8"
+            style="@style/Guideline_horizontal"
+            app:layout_constraintGuide_percent="0.36" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/line9"
+            style="@style/Guideline_horizontal"
+            app:layout_constraintGuide_percent="0.52" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/line10"
+            style="@style/Guideline_horizontal"
+            app:layout_constraintGuide_percent="0.55" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/line11"
+            style="@style/Guideline_horizontal"
+            app:layout_constraintGuide_percent="0.71" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/line12"
+            style="@style/Guideline_horizontal"
+            app:layout_constraintGuide_percent="0.74" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/line13"
+            style="@style/Guideline_horizontal"
+            app:layout_constraintGuide_percent="0.9" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/line14"
+            style="@style/Guideline_horizontal"
+            app:layout_constraintGuide_percent="0.92" />
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_avt"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            app:cardCornerRadius="55dp"
+            app:layout_constraintLeft_toLeftOf="@id/line5"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/avata" />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="25dp"
+            android:fontFamily="@font/raleway_regular"
+            android:text="MARY OLSON"
+            android:textColor="#151515"
+            android:textSize="15sp"
+            app:layout_constraintLeft_toRightOf="@id/cv_avt"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="70dp"
+            android:background="@drawable/icons_8_settings"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="40dp"
+            android:background="@drawable/icons_8_translation"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/layout_cv_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="27dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="@id/line5"
+            app:layout_constraintTop_toTopOf="@id/line7"
+            app:layout_constraintVertical_bias="0.04">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="38dp"
+                android:layout_height="39dp"
+                app:cardCornerRadius="50dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/custom_button_menu"
+                    android:src="@drawable/icons_8_alarm" />
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_menu1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:fontFamily="@font/raleway_medium"
+            android:text="Alerts"
+            android:textColor="#454545"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/layout_cv_1"
+            app:layout_constraintTop_toTopOf="@id/line7"
+            app:layout_constraintVertical_bias="0.067" />
+
+        <LinearLayout
+            android:id="@+id/layout_cv_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="27dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="@id/line5"
+            app:layout_constraintTop_toBottomOf="@id/layout_cv_1"
+            app:layout_constraintVertical_bias="0.03">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="50dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/custom_button_menu"
+                    android:src="@drawable/icons_8_left_and_right_arrows" />
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_menu2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:fontFamily="@font/raleway_medium"
+            android:text="Predictions"
+            android:textColor="#454545"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/layout_cv_2"
+            app:layout_constraintTop_toBottomOf="@id/tv_menu1"
+            app:layout_constraintVertical_bias="0.073" />
+
+
+        <LinearLayout
+            android:id="@+id/layout_cv_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="27dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="@id/line5"
+            app:layout_constraintTop_toBottomOf="@id/layout_cv_2"
+            app:layout_constraintVertical_bias="0.03">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="50dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/custom_button_menu"
+                    android:src="@drawable/icons_8_pin" />
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_menu3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:fontFamily="@font/raleway_medium"
+            android:text="Saved elements"
+            android:textColor="#454545"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/layout_cv_3"
+            app:layout_constraintTop_toBottomOf="@id/tv_menu2"
+            app:layout_constraintVertical_bias="0.073" />
+
+        <LinearLayout
+            android:id="@+id/layout_cv_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="27dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="@id/line5"
+            app:layout_constraintTop_toBottomOf="@id/layout_cv_3"
+            app:layout_constraintVertical_bias="0.03">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="50dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/custom_button_menu"
+                    android:src="@drawable/icons_8_pin" />
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:fontFamily="@font/raleway_medium"
+            android:text="Saved elements"
+            android:textColor="#454545"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/layout_cv_4"
+            app:layout_constraintTop_toBottomOf="@id/tv_menu3"
+            app:layout_constraintVertical_bias="0.073" />
+
+        <View
+            android:id="@+id/view_menu1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="20dp"
+            android:background="#434343"
+            app:layout_constraintTop_toBottomOf="@id/layout_cv_4" />
+        <TextView
+            android:id="@+id/tv_tools"
+            android:layout_margin="27dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/view_menu1"
+            app:layout_constraintLeft_toLeftOf="@id/line5"
+            android:text="Tools"
+            android:textColor="#151515"
+            android:background="@drawable/custom_radius_info2"
+            android:fontFamily="@font/raleway_medium"
+            android:textSize="16sp"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
