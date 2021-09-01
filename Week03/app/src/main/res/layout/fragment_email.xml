@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Email">
+    tools:context=".fragments.Email">
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/line1"
@@ -134,12 +134,13 @@
         app:layout_constraintRight_toRightOf="@id/line6"
         app:layout_constraintTop_toBottomOf="@id/tv_future"
         android:text="password"/>
-    <TextView
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/tv_resendEmail"
         android:gravity="center"
         android:textColor="@color/white"
         android:layout_width="0dp"
         android:textSize="14sp"
+        android:enabled="false"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/tv_incidunt"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -147,9 +148,10 @@
         app:layout_constraintRight_toRightOf="@id/line6"
         app:layout_constraintVertical_bias="0.2"
         android:text="RESEND EMAIL"
-        android:background="@drawable/custom_login_button"/>
+        android:background="@drawable/custom_login_unenable"/>
 
 <TextView
+    android:id="@+id/tv_countDown"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:text="Wait 30 seconds before sending it"

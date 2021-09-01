@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/account_nav"
+    app:startDestination="@id/login">
+
+    <fragment
+        android:id="@+id/login"
+        android:name="com.example.week03.fragments.Login"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_login_to_signUp"
+            app:destination="@id/signUp" />
+        <action
+            android:id="@+id/action_login_to_email"
+            app:destination="@id/email" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/signUp"
+        android:name="com.example.week03.fragments.SignUp"
+        android:label="fragment_sign_up"
+        tools:layout="@layout/fragment_sign_up" >
+        <action
+            android:id="@+id/action_signUp_to_login"
+            app:destination="@id/login" />
+        <action
+            android:id="@+id/action_signUp_to_email"
+            app:destination="@id/email" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/confirmPassword"
+        android:name="com.example.week03.fragments.ConfirmPassword"
+        android:label="fragment_confirm_password"
+        tools:layout="@layout/fragment_confirm_password" >
+        <action
+            android:id="@+id/action_confirmPassword_to_login"
+            app:destination="@id/login" />
+    </fragment>
+    <fragment
+        android:id="@+id/email"
+        android:name="com.example.week03.fragments.Email"
+        android:label="fragment_email"
+        tools:layout="@layout/fragment_email" >
+        <action
+            android:id="@+id/action_email_to_confirmPassword"
+            app:destination="@id/confirmPassword" />
+    </fragment>
+</navigation>

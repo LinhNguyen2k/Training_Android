@@ -1,44 +1,47 @@
-package com.example.week03
+package com.example.week03.fragments
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.Menu
-import android.view.MenuItem
+import android.view.LayoutInflater
 import android.view.View
+import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.week03.R
 import com.example.week03.adapter.AdapterHomeListOne
 import com.example.week03.adapter.AdapterHomeListTwo
+
 import com.example.week03.model.InfoHomeOne
 import com.example.week03.model.InfoHomeTwo
-import kotlinx.android.synthetic.main.activity_home.*
+import kotlinx.android.synthetic.main.fragment_home.*
 
-class Home : AppCompatActivity() {
 
-    private val listInfoHomeOne = getAllItem1()
-    private val adapterHomeListOne = AdapterHomeListOne(listInfoHomeOne, this)
+class Home : Fragment() {
+        private val listInfoHomeOne = getAllItem1()
+    private val adapterHomeListOne = activity?.let { AdapterHomeListOne(listInfoHomeOne, it) }
     private val listInfoHomeTwo = getAllItem2()
-    private val adapterHomeListTwo = AdapterHomeListTwo(listInfoHomeTwo, this)
+    private val adapterHomeListTwo = activity?.let { AdapterHomeListTwo(listInfoHomeTwo, it) }
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        val view = inflater.inflate(R.layout.fragment_home, container, false)
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_home)
-        val actionBar = supportActionBar
-        actionBar!!.hide()
-        val layoutManager1 = LinearLayoutManager(applicationContext, RecyclerView.HORIZONTAL, false)
+        val layoutManager1 = LinearLayoutManager(activity, RecyclerView.HORIZONTAL, false)
         rc_listone.adapter = adapterHomeListOne
         rc_listone.layoutManager = layoutManager1
 
 
-        val layoutManager2 = LinearLayoutManager(applicationContext, RecyclerView.VERTICAL, false)
+        val layoutManager2 = LinearLayoutManager(activity, RecyclerView.VERTICAL, false)
         rc_listtwo.adapter = adapterHomeListTwo
         rc_listtwo.layoutManager = layoutManager2
         val itemDecoration =
-            DividerItemDecoration(this, DividerItemDecoration.VERTICAL)
+            DividerItemDecoration(activity, DividerItemDecoration.VERTICAL)
         rc_listtwo.addItemDecoration(itemDecoration)
         bottom_NVT.background = null
         Btnt_bar.background = null
+        return view
 
     }
 
