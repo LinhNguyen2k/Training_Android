@@ -16,6 +16,11 @@
         <action
             android:id="@+id/action_login_to_email"
             app:destination="@id/email" />
+        <argument
+            app:nullable="true"
+            android:defaultValue="@null"
+            android:name="currentUsers"
+            app:argType="com.example.week03.model.User" />
 
     </fragment>
     <fragment
@@ -39,6 +44,11 @@
         <action
             android:id="@+id/action_confirmPassword_to_login"
             app:destination="@id/login" />
+        <argument
+            app:nullable="true"
+            android:defaultValue="@null"
+            android:name="setUser"
+            app:argType="com.example.week03.model.User" />
     </fragment>
     <fragment
         android:id="@+id/email"
@@ -48,5 +58,10 @@
         <action
             android:id="@+id/action_email_to_confirmPassword"
             app:destination="@id/confirmPassword" />
+        <argument
+            app:nullable="true"
+            android:defaultValue="@null"
+            android:name="setPassWord"
+            app:argType="com.example.week03.model.User" />
     </fragment>
 </navigation>

@@ -14,8 +14,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.week03.R
 import com.example.week03.model.InfoHomeOne
 
-class AdapterHomeListOne(private val listInfoOne: ArrayList<InfoHomeOne>) :
-        RecyclerView.Adapter<AdapterHomeListOne.ViewHolder>(){
+class AdapterCoin(private val listInfoOne: ArrayList<InfoHomeOne>) :
+        RecyclerView.Adapter<AdapterCoin.ViewHolder>(){
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
@@ -32,7 +32,7 @@ class AdapterHomeListOne(private val listInfoOne: ArrayList<InfoHomeOne>) :
             val info : InfoHomeOne = listInfoOne[position]
 
             holder.name.text = info.name
-        if(position == 0) {
+        if(position == 1) {
             holder.name.setTextColor(Color.WHITE)
             holder.name.setBackgroundResource(R.drawable.custom_radius_list_home)
 

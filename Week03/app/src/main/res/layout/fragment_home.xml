@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@color/white"
     android:layout_height="match_parent"
-    tools:context=".Home">
+    android:background="@color/white">
+
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/line1"
         style="@style/Guideline_horizontal"
@@ -27,24 +26,24 @@
         app:layout_constraintGuide_percent="0.92" />
 
 
-
     <ImageView
-        android:scaleType="fitXY"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:scaleType="fitXY"
         android:src="@drawable/ic_componente_6_7"
         app:layout_constraintBottom_toBottomOf="@id/line1"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintLeft_toRightOf="@+id/dollar"
         android:src="@drawable/icons_8_search"
-        app:layout_constraintTop_toTopOf="@+id/tv_tradix"
-        app:layout_constraintHorizontal_bias="0.85"/>
+        app:layout_constraintHorizontal_bias="0.85"
+        app:layout_constraintLeft_toRightOf="@+id/dollar"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_tradix" />
 
     <TextView
         android:id="@+id/tv_tradix"
@@ -55,12 +54,13 @@
         android:textColor="#2b2828"
         android:textSize="24sp"
         android:textStyle="normal"
-        app:layout_constraintHorizontal_bias="0.2"
-        app:layout_constraintVertical_bias="0.25"
         app:layout_constraintBottom_toBottomOf="@id/line1"
+        app:layout_constraintHorizontal_bias="0.2"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.25" />
+
     <ImageView
         android:id="@+id/dollar"
         android:layout_width="wrap_content"
@@ -68,74 +68,67 @@
         android:src="@drawable/ic_coin"
         app:layout_constraintBottom_toBottomOf="@id/line1"
         app:layout_constraintHorizontal_bias="0.04"
-        app:layout_constraintVertical_bias="0.25"
         app:layout_constraintLeft_toRightOf="@id/tv_tradix"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.25" />
+
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="@drawable/custom_layout_home_list1"
         android:paddingStart="20dp"
-        app:layout_constraintTop_toTopOf="@id/line3"
         app:layout_constraintBottom_toBottomOf="@id/line2"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent">
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/line3">
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rc_listone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
     </LinearLayout>
 
-    <androidx.core.widget.NestedScrollView
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:padding="30sp"
-        android:background="#00ffffff"
-        app:layout_constraintTop_toTopOf="@id/line2"
-        app:layout_constraintBottom_toBottomOf="parent"
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nestedScrollView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/line2"
+            android:background="#ffffff"
+            android:padding="30sp">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rc_listtwo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF" />
+
+
+        </androidx.core.widget.NestedScrollView>
+
+    <TextView
+        android:id="@+id/tv_loadMore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_radius_list_home"
+        android:fontFamily="@font/raleway_medium"
+        android:text="Load More"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        >
-        <androidx.recyclerview.widget.RecyclerView
-            android:layout_width="match_parent"
-            android:background="#00ffffff"
-            android:layout_height="wrap_content"
-            android:id="@+id/rc_listtwo" />
-    </androidx.core.widget.NestedScrollView>
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@id/nestedScrollView"/>
+
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:layout_height="wrap_content"
         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
         android:src="@drawable/icons_8_alarm"
         app:backgroundTint="#101010"
-        android:layout_margin="20dp"
         app:fabCustomSize="55dp"
-        app:layout_constraintBottom_toBottomOf="@id/line4"
-        app:layout_constraintRight_toRightOf="parent" />
-
-    <androidx.coordinatorlayout.widget.CoordinatorLayout
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:background="@drawable/custom_layout_nav"
-        app:layout_constraintTop_toTopOf="@id/line4"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent">
-
-    <com.google.android.material.bottomappbar.BottomAppBar
-        android:id="@+id/Btnt_bar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        android:background="@color/white">
-
-        <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:id="@+id/bottom_NVT"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@android:color/transparent"
-            android:padding="10dp"
-            app:menu="@menu/menu"/>
-    </com.google.android.material.bottomappbar.BottomAppBar>
-    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+        app:layout_constraintRight_toRightOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

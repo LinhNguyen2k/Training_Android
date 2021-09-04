@@ -144,6 +144,7 @@
         app:layout_constraintVertical_bias="0.9" />
 
     <EditText
+        android:id="@+id/edt_email"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="@drawable/custom_text_input"
@@ -156,11 +157,13 @@
         app:layout_constraintTop_toTopOf="@id/line7" />
 
     <EditText
+        android:id="@+id/edt_passWord"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="@drawable/custom_text_input"
         android:hint="Password"
         android:paddingLeft="30dp"
+        android:inputType="textPassword"
         android:textColor="#9d9d9d"
         app:layout_constraintBottom_toBottomOf="@id/line10"
         app:layout_constraintLeft_toLeftOf="@id/line5"
@@ -168,6 +171,7 @@
         app:layout_constraintTop_toTopOf="@id/line9" />
 
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_login"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="@drawable/custom_login_button"
@@ -175,7 +179,6 @@
         android:text="LOGIN"
         android:textColor="#ffffff"
         android:textSize="17sp"
-
         android:textStyle="normal"
         app:layout_constraintBottom_toBottomOf="@id/line12"
         app:layout_constraintLeft_toLeftOf="@id/line5"

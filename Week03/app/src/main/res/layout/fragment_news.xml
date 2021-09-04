@@ -89,54 +89,49 @@
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/line7"
             style="@style/Guideline_horizontal"
-            app:layout_constraintGuide_percent="0.33" />
+            app:layout_constraintGuide_percent="0.36" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/line8"
             style="@style/Guideline_horizontal"
-            app:layout_constraintGuide_percent="0.36" />
+            app:layout_constraintGuide_percent="0.4" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/line9"
             style="@style/Guideline_horizontal"
-            app:layout_constraintGuide_percent="0.52" />
+            app:layout_constraintGuide_percent="0.56" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/line10"
             style="@style/Guideline_horizontal"
-            app:layout_constraintGuide_percent="0.55" />
+            app:layout_constraintGuide_percent="0.6" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/line11"
             style="@style/Guideline_horizontal"
-            app:layout_constraintGuide_percent="0.71" />
+            app:layout_constraintGuide_percent="0.76" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/line12"
             style="@style/Guideline_horizontal"
-            app:layout_constraintGuide_percent="0.74" />
+            app:layout_constraintGuide_percent="0.8" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/line13"
             style="@style/Guideline_horizontal"
-            app:layout_constraintGuide_percent="0.9" />
-
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/line14"
-            style="@style/Guideline_horizontal"
-            app:layout_constraintGuide_percent="0.92" />
+            app:layout_constraintGuide_percent="0.96" />
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rc_listone"
-            android:layout_width="wrap_content"
-            android:layout_height="55dp"
+            android:id="@+id/rc_news"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.cardview.widget.CardView
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_marginTop="60dp"
+            android:layout_marginTop="80dp"
             app:cardCornerRadius="7dp"
             app:layout_constraintBottom_toBottomOf="@id/line7"
             app:layout_constraintLeft_toLeftOf="@id/line5"
@@ -159,6 +154,7 @@
             app:layout_constraintTop_toTopOf="@id/line8">
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/cv_itemNew1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 app:cardCornerRadius="5dp">
@@ -184,7 +180,7 @@
                         android:fontFamily="@font/raleway_regular"
                         android:text="ALT -3,87%"
                         android:textColor="#f00909"
-                        android:textSize="10sp" />
+                        android:textSize="12sp" />
 
                     <TextView
                         android:id="@+id/tv_layout1_2"
@@ -210,7 +206,7 @@
                         android:fontFamily="@font/lato_light"
                         android:text="Illum velit nam voluptatum enim aut"
                         android:textColor="#000000"
-                        android:textSize="10sp" />
+                        android:textSize="12sp" />
 
                     <TextView
                         android:id="@+id/tv_layout1_4"
@@ -222,7 +218,7 @@
                         android:fontFamily="@font/lato_light"
                         android:text="ratione ratione officiis totam."
                         android:textColor="#000000"
-                        android:textSize="10sp" />
+                        android:textSize="12sp" />
 
                     <TextView
                         android:id="@+id/tv_layout1_5"
@@ -234,7 +230,7 @@
                         android:fontFamily="@font/lato_light"
                         android:text="Mollitia eum sint tempora ducimus"
                         android:textColor="#000000"
-                        android:textSize="10sp" />
+                        android:textSize="12sp" />
 
                     <TextView
                         android:id="@+id/tv_layout1_6"
@@ -246,7 +242,7 @@
                         android:fontFamily="@font/lato_light"
                         android:text="2 Sept 2020"
                         android:textColor="#000000"
-                        android:textSize="10sp" />
+                        android:textSize="12sp" />
 
                     <ImageView
                         android:layout_width="wrap_content"
@@ -263,6 +259,7 @@
         </LinearLayout>
 
         <ImageView
+            android:layout_marginTop="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/alert"
@@ -279,6 +276,7 @@
             app:layout_constraintTop_toTopOf="@id/line10">
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/cv_itemNew2"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 app:cardCornerRadius="5dp">
@@ -292,7 +290,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:scaleType="fitXY"
-                        android:src="@drawable/image2390177" />
+                        android:src="@drawable/image2351087" />
 
                     <TextView
                         android:id="@+id/tv_layout2_1"
@@ -304,7 +302,7 @@
                         android:fontFamily="@font/raleway_regular"
                         android:text="HKD -2,13%"
                         android:textColor="#f00909"
-                        android:textSize="10sp" />
+                        android:textSize="12sp" />
 
                     <TextView
                         android:id="@+id/tv_layout2_2"
@@ -330,7 +328,7 @@
                         android:fontFamily="@font/lato_light"
                         android:text="Illum velit nam voluptatum enim aut"
                         android:textColor="#000000"
-                        android:textSize="10sp" />
+                        android:textSize="12sp" />
 
                     <TextView
                         android:id="@+id/tv_layout2_4"
@@ -342,7 +340,7 @@
                         android:fontFamily="@font/lato_light"
                         android:text="ratione ratione officiis totam."
                         android:textColor="#000000"
-                        android:textSize="10sp" />
+                        android:textSize="12sp" />
 
                     <TextView
                         android:id="@+id/tv_layout2_5"
@@ -354,7 +352,7 @@
                         android:fontFamily="@font/lato_light"
                         android:text="Mollitia eum sint tempora ducimus"
                         android:textColor="#000000"
-                        android:textSize="10sp" />
+                        android:textSize="12sp" />
 
                     <TextView
                         android:id="@+id/tv_layout2_6"
@@ -366,7 +364,7 @@
                         android:fontFamily="@font/lato_light"
                         android:text="3 Sept 2020"
                         android:textColor="#000000"
-                        android:textSize="10sp" />
+                        android:textSize="12sp" />
 
                     <ImageView
                         android:layout_width="wrap_content"
@@ -382,14 +380,6 @@
             </androidx.cardview.widget.CardView>
         </LinearLayout>
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/alert"
-            app:layout_constraintRight_toRightOf="@id/line6"
-            app:layout_constraintTop_toTopOf="@id/line7" />
-
-
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -399,6 +389,7 @@
             app:layout_constraintTop_toTopOf="@id/line12">
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/cv_itemNew3"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 app:cardCornerRadius="5dp">
@@ -424,7 +415,7 @@
                         android:fontFamily="@font/raleway_regular"
                         android:text="AAPL -0,91%"
                         android:textColor="#f00909"
-                        android:textSize="10sp" />
+                        android:textSize="12sp" />
 
                     <TextView
                         android:id="@+id/tv_layout3_2"
@@ -450,7 +441,7 @@
                         android:fontFamily="@font/lato_light"
                         android:text="Illum velit nam voluptatum enim aut"
                         android:textColor="#000000"
-                        android:textSize="10sp" />
+                        android:textSize="12sp" />
 
                     <TextView
                         android:id="@+id/tv_layout3_4"
@@ -462,7 +453,7 @@
                         android:fontFamily="@font/lato_light"
                         android:text="ratione ratione officiis totam."
                         android:textColor="#000000"
-                        android:textSize="10sp" />
+                        android:textSize="12sp" />
 
                     <TextView
                         android:id="@+id/tv_layout3_5"
@@ -474,7 +465,7 @@
                         android:fontFamily="@font/lato_light"
                         android:text="Mollitia eum sint tempora ducimus"
                         android:textColor="#000000"
-                        android:textSize="10sp" />
+                        android:textSize="12sp" />
 
                     <TextView
                         android:id="@+id/tv_layout3_6"
@@ -486,7 +477,7 @@
                         android:fontFamily="@font/lato_light"
                         android:text="1 Sept 2020"
                         android:textColor="#000000"
-                        android:textSize="10sp" />
+                        android:textSize="12sp" />
 
                     <ImageView
                         android:layout_width="wrap_content"
@@ -502,30 +493,5 @@
             </androidx.cardview.widget.CardView>
         </LinearLayout>
 
-        <androidx.coordinatorlayout.widget.CoordinatorLayout
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:background="@drawable/custom_layout_nav"
-            app:layout_constraintTop_toTopOf="@id/line14"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent">
-
-            <com.google.android.material.bottomappbar.BottomAppBar
-                android:id="@+id/Btnt_bar"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom"
-                android:background="@color/white">
-
-                <com.google.android.material.bottomnavigation.BottomNavigationView
-                    android:id="@+id/bottom_NVT"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@android:color/transparent"
-                    android:padding="10dp"
-                    app:menu="@menu/menu"/>
-            </com.google.android.material.bottomappbar.BottomAppBar>
-        </androidx.coordinatorlayout.widget.CoordinatorLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

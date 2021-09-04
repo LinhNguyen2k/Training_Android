@@ -10,7 +10,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Week03">
         <activity
-            android:name=".Home1_Activity"
+            android:launchMode="singleTask"
+            android:name=".Home_Activity"
             android:exported="true" />
         <activity
             android:name=".Account_Activity"
@@ -24,9 +25,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".Home"
-            android:exported="true" />
+
         <activity
             android:name=".MainActivity"
             android:exported="true" />

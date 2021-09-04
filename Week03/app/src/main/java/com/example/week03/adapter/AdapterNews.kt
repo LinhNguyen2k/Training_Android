@@ -1,25 +1,19 @@
 package com.example.week03.adapter
 
-import android.annotation.SuppressLint
-import android.content.Context
 import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import androidx.core.content.ContextCompat
-import androidx.fragment.app.FragmentActivity
-
 import androidx.recyclerview.widget.RecyclerView
 import com.example.week03.R
 import com.example.week03.model.InfoHomeOne
 
-class AdapterHomeListOne(private val listInfoOne: ArrayList<InfoHomeOne>) :
-        RecyclerView.Adapter<AdapterHomeListOne.ViewHolder>(){
+class AdapterNews(private val listItemNews : ArrayList<InfoHomeOne>) : RecyclerView.Adapter<AdapterNews.ViewHolder>() {
+    class ViewHolder(view : View) : RecyclerView.ViewHolder(view){
 
-    class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+        var name : TextView = view.findViewById(R.id.tv_info_list1)
 
-            var name : TextView = view.findViewById(R.id.tv_info_list1)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -27,24 +21,22 @@ class AdapterHomeListOne(private val listInfoOne: ArrayList<InfoHomeOne>) :
         return ViewHolder(view)
     }
 
-    @SuppressLint("ResourceAsColor")
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-            val info : InfoHomeOne = listInfoOne[position]
+        val item : InfoHomeOne = listItemNews[position]
 
-            holder.name.text = info.name
+        holder.name.text = item.name
         if(position == 0) {
             holder.name.setTextColor(Color.WHITE)
-            holder.name.setBackgroundResource(R.drawable.custom_radius_list_home)
+            holder.name.setBackgroundResource(R.drawable.custom_radius_info2)
 
         }else{
             holder.name.setTextColor(Color.BLACK)
             holder.name.setBackgroundResource(R.drawable.custom_radius_info1)
         }
-
     }
 
     override fun getItemCount(): Int {
-        if (listInfoOne == null) return 0
-        return  listInfoOne.size
+        if (listItemNews == null) return  0
+        return listItemNews.size
     }
 }

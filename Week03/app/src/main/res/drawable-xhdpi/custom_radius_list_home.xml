@@ -5,12 +5,12 @@
 
 
     <solid
-        android:color="#f8f8f8" >
+        android:color="#f21cc8" >
 
     </solid>
     <padding android:left="7dp"
-        android:top="5dp"
-        android:bottom="5dp"
+        android:top="7dp"
+        android:bottom="7dp"
         android:right="7dp"></padding>
     <corners
         android:radius="30dp" >

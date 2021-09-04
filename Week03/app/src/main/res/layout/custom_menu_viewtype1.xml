@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:paddingLeft="35dp"
+    android:layout_width="match_parent"
+    android:layout_height="60dp">
+    <ImageView
+        android:id="@+id/menu_item_icon"
+        android:src="@drawable/icons_8_alarm"
+        android:layout_centerVertical="true"
+        android:padding="10dp"
+        android:background="@drawable/custom_menu_viewtype1"
+        android:layout_width="45dp"
+        android:layout_height="45dp"/>
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:id="@+id/tv_menu_title"
+        android:layout_toRightOf="@id/menu_item_icon"
+        android:text="Alerts"
+        android:layout_marginLeft="10dp"
+        android:fontFamily="@font/raleway_medium"
+        android:textColor="#454545"
+        android:textSize="16sp"
+        android:layout_centerVertical="true"  />
+</RelativeLayout>

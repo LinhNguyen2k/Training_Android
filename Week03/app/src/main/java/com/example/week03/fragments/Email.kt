@@ -9,12 +9,17 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 import com.example.week03.R
+import com.example.week03.SQLite_Account
+import com.example.week03.model.User
 import kotlinx.android.synthetic.main.fragment_email.*
 import kotlinx.android.synthetic.main.fragment_email.view.*
 
 class Email : Fragment() {
     private var mHandler = Handler(Looper.getMainLooper())
+    private val args by navArgs<EmailArgs>()
+
     lateinit var text: String
     var time = 5
     override fun onCreateView(
@@ -22,10 +27,13 @@ class Email : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.fragment_email, container, false)
-
-
+        val sqliteAccount = SQLite_Account(context)
+        var email = args.setPassWord!!.email
         view.tv_resendEmail.setOnClickListener {
-            findNavController().navigate(R.id.action_email_to_confirmPassword)
+            sqliteAccount.updateData(email, "123")
+            var user = User(email, "123")
+            val action = EmailDirections.actionEmailToConfirmPassword(user)
+            findNavController().navigate(action)
         }
 
         val thread = Thread {

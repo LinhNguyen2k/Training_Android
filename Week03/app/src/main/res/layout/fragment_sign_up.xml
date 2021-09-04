@@ -133,6 +133,7 @@
         app:layout_constraintRight_toRightOf="@id/line6"
         app:layout_constraintTop_toBottomOf="@id/tv_trading" />
     <EditText
+        android:id="@+id/edt_emmail"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:paddingLeft="30dp"
@@ -144,9 +145,11 @@
         android:background="@drawable/custom_text_input"
         android:hint="E-mail"/>
     <EditText
+        android:id="@+id/edt_passWord"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:paddingLeft="30dp"
+        android:inputType="textPassword"
         android:textColor="#9d9d9d"
         app:layout_constraintLeft_toLeftOf="@id/line5"
         app:layout_constraintRight_toRightOf="@id/line6"
@@ -155,6 +158,7 @@
         android:background="@drawable/custom_text_input"
         android:hint="Password"/>
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_signUp"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:text="SIGN UP"
