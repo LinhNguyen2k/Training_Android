@@ -135,7 +135,9 @@
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="@id/line7"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"/>
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:paddingBottom="25dp"
+        />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
