@@ -11,9 +11,9 @@
     <LinearLayout
         android:orientation="vertical"
         android:id="@+id/layoutDelete"
-        android:layout_width="70dp"
+        android:layout_width="80dp"
         android:layout_height="match_parent"
-        android:background="#E91E63"
+        android:background="#DD2F2F"
         android:gravity="center">
 
         <ImageView
@@ -32,6 +32,7 @@
     </LinearLayout>
 
 <RelativeLayout
+    android:paddingRight="10dp"
     android:id="@+id/layout_custom"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"

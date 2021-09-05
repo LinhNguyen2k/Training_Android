@@ -1,5 +1,6 @@
 package com.example.week03.fragments
 
+import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -15,7 +16,12 @@ import com.example.week03.adapter.AdapterHomeListTwo
 
 import com.example.week03.model.InfoHomeOne
 import com.example.week03.model.InfoHomeTwo
+import kotlinx.android.synthetic.main.fragment_coin.*
+import kotlinx.android.synthetic.main.fragment_coin.img_notification
+import kotlinx.android.synthetic.main.fragment_home.*
 import kotlinx.android.synthetic.main.fragment_home.view.*
+import java.util.*
+import kotlin.collections.ArrayList
 
 
 class Home : Fragment() {
@@ -55,6 +61,13 @@ class Home : Fragment() {
 
 
         }
+        view.btn_notification.setOnClickListener {
+            val rnd = Random()
+            val color = Color.argb(255, rnd.nextInt(256), rnd.nextInt(256), rnd.nextInt(256))
+            btn_notification.background.setTint(color)
+        }
+
+
         adapterHomeListTwo.setOnclickItem {
             val item = listInfoHomeTwo[it]
 

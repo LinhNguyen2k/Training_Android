@@ -56,9 +56,12 @@ class AdapterHomeListTwo(private val listInfoTwo: ArrayList<InfoHomeTwo>) :
         holder.text4.text = info.text4
 
         viewBinderHelper.bind(holder.swipeRevealLayout, position.toString())
+        viewBinderHelper.setOpenOnlyOne(true)
+        viewBinderHelper.closeLayout(holder.adapterPosition.toString())
         holder.layoutDelete.setOnClickListener {
             listInfoTwo.removeAt(holder.adapterPosition)
             notifyItemRemoved(holder.adapterPosition)
+
         }
 
     }

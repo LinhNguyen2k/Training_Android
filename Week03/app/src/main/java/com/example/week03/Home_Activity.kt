@@ -31,8 +31,6 @@ class Home_Activity : AppCompatActivity() {
 
     override fun onBackPressed() {
         if(navHost.childFragmentManager.backStackEntryCount == 0){
-//        val count = supportFragmentManager.backStackEntryCount
-//        if (count == 0) {
             val eBundle = AlertDialog.Builder(this)
             eBundle.setTitle("Exit")
             eBundle.setIcon(R.drawable.ic_baseline_warning_24)
