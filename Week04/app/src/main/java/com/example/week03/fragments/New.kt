@@ -35,6 +35,18 @@ class New : Fragment() {
             var action = NewDirections.actionNew1ToNewsArticle(title)
             findNavController().navigate(action)
         }
+        view.cv_itemNew2.setOnClickListener {
+            val title = view.tv_layout2_2.text.toString()
+
+            var action = NewDirections.actionNew1ToNewsArticle(title)
+            findNavController().navigate(action)
+        }
+        view.cv_itemNew3.setOnClickListener {
+            val title = view.tv_layout3_2.text.toString()
+
+            var action = NewDirections.actionNew1ToNewsArticle(title)
+            findNavController().navigate(action)
+        }
 
         view.view_back.setOnClickListener {
             findNavController().navigateUp()

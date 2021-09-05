@@ -114,8 +114,8 @@
         <View
             android:layout_width="25dp"
             android:layout_height="25dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginRight="70dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginRight="85dp"
             android:background="@drawable/icons_8_settings"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -123,7 +123,7 @@
         <View
             android:layout_width="25dp"
             android:layout_height="25dp"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="35dp"
             android:layout_marginRight="30dp"
             android:background="@drawable/icons_8_translation"
             app:layout_constraintRight_toRightOf="parent"
