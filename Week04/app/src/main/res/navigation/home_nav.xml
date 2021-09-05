@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_nav"
+    app:startDestination="@id/home2">
+
+    <fragment
+        tools:layout="@layout/fragment_home"
+        android:id="@+id/home2"
+        android:name="com.example.week03.fragments.Home"
+        android:label="Home" >
+        <action
+            android:id="@+id/action_home2_to_coin"
+            app:destination="@id/coin" />
+    </fragment>
+    <fragment
+        tools:layout="@layout/fragment_coin"
+        android:id="@+id/coin"
+        android:name="com.example.week03.fragments.Coin"
+        android:label="Coin" >
+        <action
+            android:id="@+id/action_coin_to_home2"
+            app:destination="@id/home2" />
+        <argument
+            app:nullable="true"
+            android:defaultValue="@null"
+            android:name="sendData"
+            app:argType="com.example.week03.model.InfoHomeTwo" />
+    </fragment>
+    <fragment
+        tools:layout="@layout/fragment_menu"
+        android:id="@+id/menu"
+        android:name="com.example.week03.fragments.Menu"
+        android:label="Menu" />
+    <fragment
+        tools:layout="@layout/fragment_news"
+        android:id="@+id/new1"
+        android:name="com.example.week03.fragments.New"
+        android:label="New" >
+        <action
+            android:id="@+id/action_new1_to_newsArticle"
+            app:destination="@id/newsArticle" />
+    </fragment>
+    <fragment
+        tools:layout="@layout/fragment_news_article"
+        android:id="@+id/newsArticle"
+        android:name="com.example.week03.fragments.NewsArticle"
+        android:label="NewsArticle" >
+        <argument
+            app:nullable="true"
+            android:defaultValue=""
+            android:name="sendTitle"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_newsArticle_to_new1"
+            app:destination="@id/new1" />
+    </fragment>
+</navigation>

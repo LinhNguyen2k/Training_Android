@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:paddingLeft="40dp"
+    android:layout_width="match_parent"
+    android:layout_height="60dp">
+    <TextView
+        android:id="@+id/tv_menu_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="15dp"
+        android:fontFamily="@font/raleway_medium"
+        android:text="Tools"
+        android:textColor="#151515"
+        android:textSize="17sp"
+        android:paddingBottom="7dp"
+        android:layout_centerVertical="true"
+        android:background="@drawable/custom_radius_info2" />
+    <ImageView
+        android:id="@+id/menu_item_icon"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</RelativeLayout>
