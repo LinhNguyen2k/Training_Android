@@ -13,7 +13,7 @@ import java.time.YearMonth
 import java.time.format.DateTimeFormatter
 import java.util.ArrayList
 
-class MainActivity : AppCompatActivity(), CalendarAdapter.OnItemListener {
+class MainActivity : AppCompatActivity() {
      lateinit var monthYearText: TextView
      lateinit var calendarRecyclerView: RecyclerView
      lateinit var selectedDate: LocalDate
@@ -33,7 +33,7 @@ class MainActivity : AppCompatActivity(), CalendarAdapter.OnItemListener {
     private fun setMonthView() {
         monthYearText!!.text = monthYearFromDate(selectedDate)
         val daysInMonth = daysInMonthArray(selectedDate)
-        val calendarAdapter = CalendarAdapter(daysInMonth, this)
+        val calendarAdapter = CalendarAdapter(daysInMonth)
         val layoutManager: RecyclerView.LayoutManager = GridLayoutManager(applicationContext, 7)
         calendarRecyclerView!!.layoutManager = layoutManager
         calendarRecyclerView!!.adapter = calendarAdapter
@@ -72,10 +72,10 @@ class MainActivity : AppCompatActivity(), CalendarAdapter.OnItemListener {
         setMonthView()
     }
 
-    override fun onItemClick(position: Int, dayText: String?) {
-        if (dayText != "") {
-            val message = "Selected Date " + dayText + " " + monthYearFromDate(selectedDate)
-            Toast.makeText(this, message, Toast.LENGTH_LONG).show()
-        }
-    }
+//    override fun onItemClick(position: Int, dayText: String?) {
+//        if (dayText != "") {
+//            val message = "Selected Date " + dayText + " " + monthYearFromDate(selectedDate)
+//            Toast.makeText(this, message, Toast.LENGTH_LONG).show()
+//        }
+//    }
 }
