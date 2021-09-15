@@ -3,79 +3,62 @@ package com.example.nguyenanhlinh_viewpager
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import android.widget.TextView
 import android.widget.Toast
-import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import androidx.viewpager.widget.ViewPager
+import com.example.nguyenanhlinh_viewpager.adapter.CalendarAdapter
+import com.example.nguyenanhlinh_viewpager.adapter.ViewPagerAdapter
+import com.example.nguyenanhlinh_viewpager.fragment.DayOfMonthFragment
+import kotlinx.android.synthetic.main.activity_main.*
 import java.time.LocalDate
-import java.time.YearMonth
-import java.time.format.DateTimeFormatter
-import java.util.ArrayList
-
+private const val PAGE_CENTER = 1
 class MainActivity : AppCompatActivity() {
-     lateinit var monthYearText: TextView
-     lateinit var calendarRecyclerView: RecyclerView
-     lateinit var selectedDate: LocalDate
-
+    lateinit var localDate: LocalDate
+    lateinit var fragList: ArrayList<DayOfMonthFragment>
+    lateinit var pageAdapter: ViewPagerAdapter
+    var focusPage = 1
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        initWidgets()
-        selectedDate = LocalDate.now()
-        setMonthView()
-    }
-    private fun initWidgets() {
-        calendarRecyclerView = findViewById(R.id.calendarRecyclerView)
-        monthYearText = findViewById(R.id.monthYearTV)
-    }
+        supportActionBar?.hide()
 
-    private fun setMonthView() {
-        monthYearText!!.text = monthYearFromDate(selectedDate)
-        val daysInMonth = daysInMonthArray(selectedDate)
-        val calendarAdapter = CalendarAdapter(daysInMonth)
-        val layoutManager: RecyclerView.LayoutManager = GridLayoutManager(applicationContext, 7)
-        calendarRecyclerView!!.layoutManager = layoutManager
-        calendarRecyclerView!!.adapter = calendarAdapter
-    }
+        localDate = LocalDate.now()
 
-    private fun daysInMonthArray(date: LocalDate?): ArrayList<String> {
-        val daysInMonthArray = ArrayList<String>()
-        val yearMonth = YearMonth.from(date)
-        val daysInMonth = yearMonth.lengthOfMonth()
-        val firstOfMonth = selectedDate!!.withDayOfMonth(1)
-        val dayOfWeek = firstOfMonth.dayOfWeek.value
-        for (i in 1..42) {
-            if (i <= dayOfWeek || i > daysInMonth + dayOfWeek) {
-                daysInMonthArray.add("")
-            } else {
-                daysInMonthArray.add((i - dayOfWeek).toString())
-            }
+        fragList = ArrayList()
+
+        fragList.apply {
+            add(DayOfMonthFragment.newInstance(localDate.minusMonths(1)))
+            add(DayOfMonthFragment.newInstance(localDate))
+            add(DayOfMonthFragment.newInstance(localDate.plusMonths(1)))
         }
-        return daysInMonthArray
+        pageAdapter = ViewPagerAdapter(supportFragmentManager, fragList)
+        viewPager_layout.adapter = pageAdapter
+        viewPager_layout.setCurrentItem(1, false)
+        viewPager_layout.addOnPageChangeListener(object : ViewPager.OnPageChangeListener {
+            override fun onPageScrolled(
+                position: Int,
+                positionOffset: Float,
+                positionOffsetPixels: Int
+            ) {
+            }
+
+            override fun onPageSelected(position: Int) {
+                focusPage = position
+            }
+
+            override fun onPageScrollStateChanged(state: Int) {
+                if (state == ViewPager.SCROLL_STATE_IDLE) {
+                    if (focusPage < PAGE_CENTER) {
+                        localDate = localDate.minusMonths(1)
+                    } else if (focusPage > PAGE_CENTER) {
+                        localDate = localDate.plusMonths(1)
+                    }
+                    pageAdapter.setCalendar(localDate)
+                    viewPager_layout.setCurrentItem(1, false)
+                }
+            }
+
+        })
     }
-
-    private fun monthYearFromDate(date: LocalDate?): String {
-        val formatter = DateTimeFormatter.ofPattern("MMMM yyyy")
-        return date!!.format(formatter)
-    }
-
-
-    fun previousMonthAction(view: View?) {
-        selectedDate = selectedDate!!.minusMonths(1)
-        setMonthView()
-    }
-
-
-    fun nextMonthAction(view: View?) {
-        selectedDate = selectedDate!!.plusMonths(1)
-        setMonthView()
-    }
-
-//    override fun onItemClick(position: Int, dayText: String?) {
-//        if (dayText != "") {
-//            val message = "Selected Date " + dayText + " " + monthYearFromDate(selectedDate)
-//            Toast.makeText(this, message, Toast.LENGTH_LONG).show()
-//        }
-//    }
 }

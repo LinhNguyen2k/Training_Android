@@ -3,8 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Code/Android_2021/Training/NguyenAnhLinh_ViewPager/app/src/main/res/drawable-v24/custom_bg_item.xml" value="0.271875" />
         <entry key="..\:/Code/Android_2021/Training/NguyenAnhLinh_ViewPager/app/src/main/res/layout/activity_main.xml" value="0.24682971014492755" />
         <entry key="..\:/Code/Android_2021/Training/NguyenAnhLinh_ViewPager/app/src/main/res/layout/custom_item.xml" value="0.21829710144927536" />
+        <entry key="..\:/Code/Android_2021/Training/NguyenAnhLinh_ViewPager/app/src/main/res/layout/fragment_day_of_month.xml" value="0.24094202898550723" />
       </map>
     </option>
   </component>

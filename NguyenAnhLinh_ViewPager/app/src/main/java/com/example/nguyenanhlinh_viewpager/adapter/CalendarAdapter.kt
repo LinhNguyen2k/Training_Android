@@ -1,23 +1,29 @@
-package com.example.nguyenanhlinh_viewpager
+package com.example.nguyenanhlinh_viewpager.adapter
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.LinearLayout
-import android.widget.RelativeLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.nguyenanhlinh_viewpager.R
 import java.util.ArrayList
 
-class CalendarAdapter(
-    private val daysOfMonth: ArrayList<String>
-) :
+class CalendarAdapter(private val daysOfMonth: ArrayList<String>) :
     RecyclerView.Adapter<CalendarAdapter.ViewHolder>() {
+    lateinit var onClickItem: (positions: Int) -> Unit
 
+    fun setOnclickItem(even: (position: Int) -> Unit) {
+        onClickItem = even
+    }
 
     inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
-        var dayOfMonth: TextView = view.findViewById(R.id.tv_cellDayText)
+        var tv_dayOfMonth: TextView = view.findViewById(R.id.tv_cellDayText)
+        init {
+            tv_dayOfMonth.setOnClickListener {
+                onClickItem.invoke(adapterPosition)
+            }
+        }
 
     }
 
@@ -34,6 +40,6 @@ class CalendarAdapter(
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.dayOfMonth.text = daysOfMonth[position]
+        holder.tv_dayOfMonth.text = daysOfMonth[position]
     }
 }
