@@ -15,9 +15,9 @@ import java.time.LocalDate
 private const val PAGE_CENTER = 1
 class MainActivity : AppCompatActivity() {
     lateinit var localDate: LocalDate
-    lateinit var fragList: ArrayList<DayOfMonthFragment>
+    lateinit var listFragment: ArrayList<DayOfMonthFragment>
     lateinit var pageAdapter: ViewPagerAdapter
-    var focusPage = 1
+    var intdex = 1
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -25,14 +25,14 @@ class MainActivity : AppCompatActivity() {
 
         localDate = LocalDate.now()
 
-        fragList = ArrayList()
+        listFragment = ArrayList()
 
-        fragList.apply {
+        listFragment.apply {
             add(DayOfMonthFragment.newInstance(localDate.minusMonths(1)))
             add(DayOfMonthFragment.newInstance(localDate))
             add(DayOfMonthFragment.newInstance(localDate.plusMonths(1)))
         }
-        pageAdapter = ViewPagerAdapter(supportFragmentManager, fragList)
+        pageAdapter = ViewPagerAdapter(supportFragmentManager, listFragment)
         viewPager_layout.adapter = pageAdapter
         viewPager_layout.setCurrentItem(1, false)
         viewPager_layout.addOnPageChangeListener(object : ViewPager.OnPageChangeListener {
@@ -44,14 +44,14 @@ class MainActivity : AppCompatActivity() {
             }
 
             override fun onPageSelected(position: Int) {
-                focusPage = position
+                intdex = position
             }
 
             override fun onPageScrollStateChanged(state: Int) {
                 if (state == ViewPager.SCROLL_STATE_IDLE) {
-                    if (focusPage < PAGE_CENTER) {
+                    if (intdex < PAGE_CENTER) {
                         localDate = localDate.minusMonths(1)
-                    } else if (focusPage > PAGE_CENTER) {
+                    } else if (intdex > PAGE_CENTER) {
                         localDate = localDate.plusMonths(1)
                     }
                     pageAdapter.setCalendar(localDate)
