@@ -3,6 +3,7 @@ package com.example.nguyenanhlinh_viewpager
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.PopupMenu
 import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
@@ -11,8 +12,11 @@ import com.example.nguyenanhlinh_viewpager.adapter.CalendarAdapter
 import com.example.nguyenanhlinh_viewpager.adapter.ViewPagerAdapter
 import com.example.nguyenanhlinh_viewpager.fragment.DayOfMonthFragment
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.toolbar.*
 import java.time.LocalDate
+
 private const val PAGE_CENTER = 1
+
 class MainActivity : AppCompatActivity() {
     lateinit var localDate: LocalDate
     lateinit var listFragment: ArrayList<DayOfMonthFragment>
@@ -22,7 +26,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         supportActionBar?.hide()
-
         localDate = LocalDate.now()
 
         listFragment = ArrayList()
@@ -60,5 +63,12 @@ class MainActivity : AppCompatActivity() {
             }
 
         })
+
     }
+
+//    fun changeStart(start: Int, indexDay : Int) {
+//        for (item in listFragment) {
+//            item.changeDayOfMon(start, indexDay)
+//        }
+//    }
 }

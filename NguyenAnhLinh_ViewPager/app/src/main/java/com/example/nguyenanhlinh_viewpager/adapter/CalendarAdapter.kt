@@ -57,6 +57,7 @@ class CalendarAdapter(private val daysOfMonth: ArrayList<DayOfMonth>, var contex
         holder.itemView.setOnClickListener(object : OnDoubleClick() {
 
             override fun onDoubleClick() {
+                if (index == -1) index = position
                 daysOfMonth[index].check= false
                 daysOfMonth[position].check= true
                 color = Color.RED
@@ -64,6 +65,7 @@ class CalendarAdapter(private val daysOfMonth: ArrayList<DayOfMonth>, var contex
             }
 
             override fun onSingleClick() {
+                if (index == -1) index = position
                 daysOfMonth[index].check= false
                 daysOfMonth[position].check= true
                 color = Color.GREEN

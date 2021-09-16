@@ -17,8 +17,7 @@ abstract class OnDoubleClick : View.OnClickListener {
         val now = SystemClock.elapsedRealtime()
         if (now - firstClickTime < doubleClickTimeout) {
             isSingleEvent = false
-            reset()
-            firstClickTime = 0L
+            handler.removeCallbacksAndMessages(runnable)
             onDoubleClick()
             return
         } else {
@@ -30,9 +29,9 @@ abstract class OnDoubleClick : View.OnClickListener {
 
     abstract fun onDoubleClick()
     abstract fun onSingleClick()
-    fun reset() {
-        handler.removeCallbacksAndMessages(runnable)
-    }
+//    fun reset() {
+//        handler.removeCallbacksAndMessages(runnable)
+//    }
 
     init {
         doubleClickTimeout = DEFAULT

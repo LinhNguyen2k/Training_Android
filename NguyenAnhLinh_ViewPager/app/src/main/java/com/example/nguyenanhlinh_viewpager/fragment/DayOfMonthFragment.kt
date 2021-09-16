@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.PopupMenu
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -18,14 +19,14 @@ import java.time.LocalDate
 import java.time.YearMonth
 import java.time.format.DateTimeFormatter
 import java.util.*
+import kotlin.collections.ArrayList
 
 class DayOfMonthFragment : Fragment() {
     private lateinit var selectedDate: LocalDate
     lateinit var calendarAdapters: CalendarAdapter
-    lateinit var calendar: Calendar
-    lateinit var listDayOfMonth: ArrayList<DayOfMonth>
-    var start = 2
-    var sdfDate = SimpleDateFormat("dd", Locale.getDefault())
+    var listDayOfMonth: ArrayList<DayOfMonth> = ArrayList()
+    var temp = 0
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -42,7 +43,6 @@ class DayOfMonthFragment : Fragment() {
         selectedDate = LocalDate.now()
         view.monthYearTV.text = monthYearFromDate(selectedDate)
         daysInMonthArray(selectedDate)
-        calendarAdapters = CalendarAdapter(listDayOfMonth,context)
         val layoutManager: RecyclerView.LayoutManager = GridLayoutManager(activity, 7)
         view.calendarRecyclerView.layoutManager = layoutManager
         view.calendarRecyclerView.adapter = calendarAdapters
@@ -50,48 +50,161 @@ class DayOfMonthFragment : Fragment() {
             DividerItemDecoration(activity, DividerItemDecoration.VERTICAL)
         view.calendarRecyclerView.addItemDecoration(itemDecoration)
 
+        view.setting.setOnClickListener {
+            var popupMenu = PopupMenu(activity, it)
+            popupMenu.menuInflater.inflate(R.menu.menu, popupMenu.menu)
+            popupMenu.show()
+            popupMenu.setOnMenuItemClickListener {
+                when (it.itemId) {
+                    R.id.mon -> {
+                        changeDayOfMon(5)
+                        view.tv_sun.text = "MOM"
+                        view.tv_mon.text = "TUE"
+                        view.tv_tue.text = "WED"
+                        view.tv_wed.text = "THUR"
+                        view.tv_thur.text = "FRI"
+                        view.tv_fri.text = "SAT"
+                        view.tv_sat.text = "SUN"
+
+                    }
+                    R.id.tue -> {
+                        changeDayOfMon(4)
+                        view.tv_sun.text = "TUE"
+                        view.tv_mon.text = "WED"
+                        view.tv_tue.text = "THUR"
+                        view.tv_wed.text = "FRI"
+                        view.tv_thur.text = "SAT"
+                        view.tv_fri.text = "SUN"
+                        view.tv_sat.text = "MON"
+                    }
+                    R.id.wed -> {
+                        changeDayOfMon(3)
+                        view.tv_sun.text = "WED"
+                        view.tv_mon.text = "THUR"
+                        view.tv_tue.text = "FRI"
+                        view.tv_wed.text = "SAT"
+                        view.tv_thur.text = "SUN"
+                        view.tv_fri.text = "MON"
+                        view.tv_sat.text = "TUE"
+                    }
+                    R.id.thur -> {
+                        changeDayOfMon(2)
+                        view.tv_sun.text = "THUR"
+                        view.tv_mon.text = "FRI"
+                        view.tv_tue.text = "SAT"
+                        view.tv_wed.text = "SUN"
+                        view.tv_thur.text = "MON"
+                        view.tv_fri.text = "TUE"
+                        view.tv_sat.text = "WED"
+                    }
+                    R.id.fri -> {
+                        changeDayOfMon(1)
+                        view.tv_sun.text = "FRI"
+                        view.tv_mon.text = "SAT"
+                        view.tv_tue.text = "SUN"
+                        view.tv_wed.text = "MON"
+                        view.tv_thur.text = "TUE"
+                        view.tv_fri.text = "WED"
+                        view.tv_sat.text = "THUR"
+                    }
+                    R.id.sat -> {
+                        changeDayOfMon(0)
+                        view.tv_sun.text = "SAT"
+                        view.tv_mon.text = "SUN"
+                        view.tv_tue.text = "MON"
+                        view.tv_wed.text = "TUE"
+                        view.tv_thur.text = "WED"
+                        view.tv_fri.text = "THUR"
+                        view.tv_sat.text = "FRI"
+                    }
+                    R.id.sun -> {
+                        changeDayOfMon(-1)
+                        view.tv_sun.text = "SUN"
+                        view.tv_mon.text = "MON"
+                        view.tv_tue.text = "TUE"
+                        view.tv_wed.text = "WED"
+                        view.tv_thur.text = "THUR"
+                        view.tv_fri.text = "FRI"
+                        view.tv_sat.text = "SAT"
+                    }
+                }
+                calendarAdapters.notifyDataSetChanged()
+                false
+            }
+        }
         return view
     }
 
 
-    private fun daysInMonthArray(date: LocalDate?): ArrayList<DayOfMonth> {
-        listDayOfMonth = ArrayList()
-        val yearMonth = YearMonth.from(date)
-        val daysInMonth = yearMonth.lengthOfMonth()
-        val firstOfMonth = selectedDate.withDayOfMonth(1)
-        val dayOfWeek = firstOfMonth.dayOfWeek.value
-        var numberDayOfPreviousWeek = dayOfWeek
-        var MonthLength = YearMonth.from(date?.minusMonths(1)).lengthOfMonth()
-        var currentTime = LocalDate.now()
+    private fun daysInMonthArray(date: LocalDate) {
+        listDayOfMonth.clear()
+        var firstOfMonth = date.withDayOfMonth(1)
+        var dayOfWeek = firstOfMonth.dayOfWeek.value + temp
+        var countWeek = dayOfWeek
+        var yearMonth = YearMonth.from(date)
+        var isOfMonth = yearMonth.lengthOfMonth()
+        var leftMonthLength = YearMonth.from(date.minusMonths(1)).lengthOfMonth()
+//        var currentTime = LocalDate.now()
+        if (dayOfWeek.toString().toInt() == -1) {
+            if (temp == 5)
+                temp = -2
+            if (temp == 4)
+                temp = -3
+            if (temp == 3)
+                temp = -4
+            if (temp == 2)
+                temp = -5
+            dayOfWeek = firstOfMonth.dayOfWeek.value + temp
+        }
         var indexDay = 1
         for (i in 1..43) {
             if (i < dayOfWeek) {
                 listDayOfMonth.add(
                     DayOfMonth(
-                        (MonthLength - numberDayOfPreviousWeek + start).toString(),
-                        false, false
+                        (leftMonthLength - countWeek + 2).toString(),
+                        check = false, checkDayOfMonth = false
                     )
                 )
-                numberDayOfPreviousWeek--
-            }else if (i >= dayOfWeek && i <= daysInMonth + dayOfWeek) {
-                if (i == (daysInMonth + dayOfWeek)) {
+                countWeek--
+            } else if (i >= dayOfWeek && i <= isOfMonth + dayOfWeek) {
+                if (i == (isOfMonth + dayOfWeek)) {
                     indexDay = 1
                 } else {
-                    if (indexDay == currentTime.dayOfMonth && date?.month == currentTime.month && date?.year == currentTime.year) {
-                        listDayOfMonth.add(DayOfMonth(indexDay.toString(),true, true))
-                    } else {
-                        listDayOfMonth.add(DayOfMonth(indexDay.toString(),false,true))
-                    }
+//                    if (indexDay == currentTime.dayOfMonth && date?.month == currentTime.month && date?.year == currentTime.year) {
+//                        listDayOfMonth.add(
+//                            DayOfMonth(
+//                                indexDay.toString(),
+//                                check = true,
+//                                checkDayOfMonth = true
+//                            )
+//                        )
+//                    }
+//                    else {
+                    listDayOfMonth.add(
+                        DayOfMonth(
+                            indexDay.toString(),
+                            check = false,
+                            checkDayOfMonth = true
+                        )
+                    )
+
                     indexDay++
                 }
 
             } else {
-                listDayOfMonth.add(DayOfMonth(indexDay.toString(),false, false))
+                listDayOfMonth.add(
+                    DayOfMonth(
+                        indexDay.toString(),
+                        check = false,
+                        checkDayOfMonth = false
+                    )
+                )
                 indexDay++
             }
         }
-        return listDayOfMonth
+        calendarAdapters = CalendarAdapter(listDayOfMonth, context)
     }
+
 
     private fun monthYearFromDate(date: LocalDate?): String {
         val formatter = DateTimeFormatter.ofPattern("MMMM yyyy")
@@ -101,10 +214,15 @@ class DayOfMonthFragment : Fragment() {
     fun updateViewPager(newMonth: LocalDate) {
         monthYearTV.text = monthYearFromDate(newMonth)
         daysInMonthArray(newMonth)
-        calendarAdapters = CalendarAdapter(listDayOfMonth,context)
-        val layoutManager: RecyclerView.LayoutManager = GridLayoutManager(activity, 7)
-        calendarRecyclerView.layoutManager = layoutManager
         calendarRecyclerView.adapter = calendarAdapters
+    }
+
+
+    fun changeDayOfMon(temp: Int) {
+        this.temp = temp
+        daysInMonthArray(selectedDate)
+        calendarRecyclerView.adapter = calendarAdapters
+        calendarAdapters.notifyDataSetChanged()
     }
 
     companion object {
@@ -118,3 +236,4 @@ class DayOfMonthFragment : Fragment() {
     }
 
 }
+
