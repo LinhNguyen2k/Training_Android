@@ -13,7 +13,6 @@
         android:id="@+id/line2"
         style="@style/Guideline_horizontal"
         app:layout_constraintGuide_percent="0.15" />
-
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/line3"
         style="@style/Guideline_horizontal"
@@ -30,7 +29,6 @@
         android:id="@+id/line6"
         style="@style/Guideline_vertical"
         app:layout_constraintGuide_percent="0.15" />
-
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/line7"
         style="@style/Guideline_horizontal"

@@ -40,7 +40,6 @@ class OnBoarding1 : Fragment() {
             editor.apply()
             val intent = Intent (activity, Account_Activity::class.java).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
             activity?.startActivity(intent)
-
         }
 
         return view

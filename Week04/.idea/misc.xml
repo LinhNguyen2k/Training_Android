@@ -77,11 +77,18 @@
         <entry key="..\:/Code/Android_2021/Training/Week03/app/src/main/res/layout/fragment_sign_up.xml" value="0.2223731884057971" />
         <entry key="..\:/Code/Android_2021/Training/Week03/app/src/main/res/layout/news_article.xml" value="0.35182679296346414" />
         <entry key="..\:/Code/Android_2021/Training/Week03/app/src/main/res/menu/menu.xml" value="0.2713541666666667" />
+        <entry key="..\:/Code/Android_2021/Training/Week04/app/src/main/res/drawable-mdpi/custom_button_menu.xml" value="0.290625" />
+        <entry key="..\:/Code/Android_2021/Training/Week04/app/src/main/res/drawable/custom_bg_icon_menu.xml" value="0.290625" />
+        <entry key="..\:/Code/Android_2021/Training/Week04/app/src/main/res/drawable/custom_button_coin.xml" value="0.290625" />
+        <entry key="..\:/Code/Android_2021/Training/Week04/app/src/main/res/layout/activity_home.xml" value="0.17300724637681159" />
+        <entry key="..\:/Code/Android_2021/Training/Week04/app/src/main/res/layout/custom_home_list2.xml" value="0.24230072463768115" />
         <entry key="..\:/Code/Android_2021/Training/Week04/app/src/main/res/layout/custom_menu_viewtype2.xml" value="0.24682971014492755" />
         <entry key="..\:/Code/Android_2021/Training/Week04/app/src/main/res/layout/custom_menu_viewtype3.xml" value="0.24682971014492755" />
         <entry key="..\:/Code/Android_2021/Training/Week04/app/src/main/res/layout/custom_menu_viewtype4.xml" value="0.24682971014492755" />
         <entry key="..\:/Code/Android_2021/Training/Week04/app/src/main/res/layout/fragment_menu.xml" value="0.24682971014492755" />
         <entry key="..\:/Code/Android_2021/Training/Week04/app/src/main/res/layout/fragment_news.xml" value="0.17028985507246377" />
+        <entry key="..\:/Code/Android_2021/Training/Week04/app/src/main/res/layout/fragment_on_boarding1.xml" value="0.4" />
+        <entry key="..\:/Code/Android_2021/Training/Week04/app/src/main/res/layout/fragment_on_boarding2.xml" value="0.25271739130434784" />
       </map>
     </option>
   </component>
