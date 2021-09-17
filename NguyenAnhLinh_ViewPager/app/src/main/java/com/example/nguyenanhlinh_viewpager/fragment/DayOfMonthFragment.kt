@@ -57,7 +57,7 @@ class DayOfMonthFragment : Fragment() {
             popupMenu.setOnMenuItemClickListener {
                 when (it.itemId) {
                     R.id.mon -> {
-                        changeDayOfMon(5)
+                        changeDayOfMonth(-1)
                         view.tv_sun.text = "MOM"
                         view.tv_mon.text = "TUE"
                         view.tv_tue.text = "WED"
@@ -68,7 +68,7 @@ class DayOfMonthFragment : Fragment() {
 
                     }
                     R.id.tue -> {
-                        changeDayOfMon(4)
+                        changeDayOfMonth(0)
                         view.tv_sun.text = "TUE"
                         view.tv_mon.text = "WED"
                         view.tv_tue.text = "THUR"
@@ -78,7 +78,7 @@ class DayOfMonthFragment : Fragment() {
                         view.tv_sat.text = "MON"
                     }
                     R.id.wed -> {
-                        changeDayOfMon(3)
+                        changeDayOfMonth(1)
                         view.tv_sun.text = "WED"
                         view.tv_mon.text = "THUR"
                         view.tv_tue.text = "FRI"
@@ -88,7 +88,7 @@ class DayOfMonthFragment : Fragment() {
                         view.tv_sat.text = "TUE"
                     }
                     R.id.thur -> {
-                        changeDayOfMon(2)
+                        changeDayOfMonth(2)
                         view.tv_sun.text = "THUR"
                         view.tv_mon.text = "FRI"
                         view.tv_tue.text = "SAT"
@@ -98,7 +98,7 @@ class DayOfMonthFragment : Fragment() {
                         view.tv_sat.text = "WED"
                     }
                     R.id.fri -> {
-                        changeDayOfMon(1)
+                        changeDayOfMonth(3)
                         view.tv_sun.text = "FRI"
                         view.tv_mon.text = "SAT"
                         view.tv_tue.text = "SUN"
@@ -108,7 +108,7 @@ class DayOfMonthFragment : Fragment() {
                         view.tv_sat.text = "THUR"
                     }
                     R.id.sat -> {
-                        changeDayOfMon(0)
+                        changeDayOfMonth(4)
                         view.tv_sun.text = "SAT"
                         view.tv_mon.text = "SUN"
                         view.tv_tue.text = "MON"
@@ -118,7 +118,7 @@ class DayOfMonthFragment : Fragment() {
                         view.tv_sat.text = "FRI"
                     }
                     R.id.sun -> {
-                        changeDayOfMon(-1)
+                        changeDayOfMonth(5)
                         view.tv_sun.text = "SUN"
                         view.tv_mon.text = "MON"
                         view.tv_tue.text = "TUE"
@@ -144,42 +144,21 @@ class DayOfMonthFragment : Fragment() {
         var yearMonth = YearMonth.from(date)
         var isOfMonth = yearMonth.lengthOfMonth()
         var leftMonthLength = YearMonth.from(date.minusMonths(1)).lengthOfMonth()
-//        var currentTime = LocalDate.now()
-        if (dayOfWeek.toString().toInt() == -1) {
-            if (temp == 5)
-                temp = -2
-            if (temp == 4)
-                temp = -3
-            if (temp == 3)
-                temp = -4
-            if (temp == 2)
-                temp = -5
-            dayOfWeek = firstOfMonth.dayOfWeek.value + temp
-        }
         var indexDay = 1
+
         for (i in 1..43) {
-            if (i < dayOfWeek) {
+            if (i <= dayOfWeek) {
                 listDayOfMonth.add(
                     DayOfMonth(
-                        (leftMonthLength - countWeek + 2).toString(),
+                        (leftMonthLength - countWeek + 1).toString(),
                         check = false, checkDayOfMonth = false
                     )
                 )
                 countWeek--
-            } else if (i >= dayOfWeek && i <= isOfMonth + dayOfWeek) {
-                if (i == (isOfMonth + dayOfWeek)) {
+            } else if (i >= dayOfWeek && i <= isOfMonth + dayOfWeek +1 ) {
+                if (i == (isOfMonth + dayOfWeek +1)) {
                     indexDay = 1
                 } else {
-//                    if (indexDay == currentTime.dayOfMonth && date?.month == currentTime.month && date?.year == currentTime.year) {
-//                        listDayOfMonth.add(
-//                            DayOfMonth(
-//                                indexDay.toString(),
-//                                check = true,
-//                                checkDayOfMonth = true
-//                            )
-//                        )
-//                    }
-//                    else {
                     listDayOfMonth.add(
                         DayOfMonth(
                             indexDay.toString(),
@@ -218,7 +197,7 @@ class DayOfMonthFragment : Fragment() {
     }
 
 
-    fun changeDayOfMon(temp: Int) {
+    fun changeDayOfMonth(temp: Int) {
         this.temp = temp
         daysInMonthArray(selectedDate)
         calendarRecyclerView.adapter = calendarAdapters
