@@ -68,7 +68,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="@drawable/custom_layout_home_list1"
-        android:paddingStart="20dp"
+        android:paddingLeft="20dp"
         app:layout_constraintBottom_toBottomOf="@id/line1"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"

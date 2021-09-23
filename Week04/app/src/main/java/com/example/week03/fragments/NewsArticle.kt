@@ -42,11 +42,11 @@ class NewsArticle : Fragment() {
     fun getAllItem(): ArrayList<InfoHomeOne> {
         val list = ArrayList<InfoHomeOne>()
 
-        list.add(InfoHomeOne("EDITORIAL"))
-        list.add(InfoHomeOne("CRYPTO NEWS"))
-        list.add(InfoHomeOne("RAW MATERIAL"))
-        list.add(InfoHomeOne("ECONOMICS"))
-        list.add(InfoHomeOne("EDITORIAL"))
+        list.add(InfoHomeOne("EDITORIAL",true))
+        list.add(InfoHomeOne("CRYPTO NEWS",false))
+        list.add(InfoHomeOne("RAW MATERIAL",false))
+        list.add(InfoHomeOne("ECONOMICS",false))
+        list.add(InfoHomeOne("EDITORIAL",false))
 
         return list
 

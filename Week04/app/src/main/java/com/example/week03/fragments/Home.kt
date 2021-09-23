@@ -39,7 +39,6 @@ class Home : Fragment() {
         view.rc_listone.adapter = adapterHomeListOne
         view.rc_listone.layoutManager = layoutManager1
 
-
         val layoutManager2 = LinearLayoutManager(activity, RecyclerView.VERTICAL, false)
         view.rc_listtwo.adapter = adapterHomeListTwo
         view.rc_listtwo.layoutManager = layoutManager2
@@ -52,14 +51,7 @@ class Home : Fragment() {
             var index = listInfoHomeTwo.size
             listInfoHomeTwo.addAll(listLoadMore(index)!!)
             adapterHomeListTwo = AdapterHomeListTwo(listInfoHomeTwo)
-            val layoutManager2 = LinearLayoutManager(activity, RecyclerView.VERTICAL, false)
             view.rc_listtwo.adapter = adapterHomeListTwo
-            view.rc_listtwo.layoutManager = layoutManager2
-            val itemDecoration =
-                DividerItemDecoration(activity, DividerItemDecoration.VERTICAL)
-            view.rc_listtwo.addItemDecoration(itemDecoration)
-
-
         }
         view.btn_notification.setOnClickListener {
             val rnd = Random()
@@ -78,29 +70,14 @@ class Home : Fragment() {
 
     }
 
-//    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-//
-//        menuInflater.inflate(R.menu.menu, menu)
-//
-//        return true
-//    }
-
-//    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-//        when(item.itemId){
-//            R.id.it_item1 ->
-//        }
-//
-//        return super.onOptionsItemSelected(item)
-//    }
-
     fun getAllItem1(): ArrayList<InfoHomeOne> {
         val list = ArrayList<InfoHomeOne>()
 
-        list.add(InfoHomeOne("INDEX"))
-        list.add(InfoHomeOne("SHARES"))
-        list.add(InfoHomeOne("CURRENCIES"))
-        list.add(InfoHomeOne("FUTURES"))
-        list.add(InfoHomeOne("CRYPTO"))
+        list.add(InfoHomeOne("INDEX", true))
+        list.add(InfoHomeOne("SHARES", false))
+        list.add(InfoHomeOne("CURRENCIES", false))
+        list.add(InfoHomeOne("FUTURES", false))
+        list.add(InfoHomeOne("CRYPTO", false))
 
         return list
 

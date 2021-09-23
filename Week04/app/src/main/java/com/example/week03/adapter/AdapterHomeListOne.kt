@@ -17,6 +17,9 @@ import com.example.week03.model.InfoHomeOne
 class AdapterHomeListOne(private val listInfoOne: ArrayList<InfoHomeOne>) :
         RecyclerView.Adapter<AdapterHomeListOne.ViewHolder>(){
 
+    var index = -1
+    var color : Int = R.drawable.custom_radius_list_home
+
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
             var name : TextView = view.findViewById(R.id.tv_info_list1)
@@ -32,11 +35,22 @@ class AdapterHomeListOne(private val listInfoOne: ArrayList<InfoHomeOne>) :
             val info : InfoHomeOne = listInfoOne[position]
 
             holder.name.text = info.name
-        if(position == 0) {
-            holder.name.setTextColor(Color.WHITE)
-            holder.name.setBackgroundResource(R.drawable.custom_radius_list_home)
 
-        }else{
+        holder.itemView.setOnClickListener {
+            if(index == -1) index = position
+            listInfoOne[index].check = false
+            listInfoOne[position].check = true
+            color = R.drawable.custom_radius_list_home
+            notifyDataSetChanged()
+        }
+
+        if(info.check) {
+            index = position
+            holder.name.setTextColor(Color.WHITE)
+            holder.name.setBackgroundResource(color)
+
+        }
+        if(!info.check){
             holder.name.setTextColor(Color.BLACK)
             holder.name.setBackgroundResource(R.drawable.custom_radius_info1)
         }

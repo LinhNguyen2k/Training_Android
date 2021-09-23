@@ -55,11 +55,11 @@ class Coin : Fragment() {
     fun getAllItem(): ArrayList<InfoHomeOne> {
         val list = ArrayList<InfoHomeOne>()
 
-        list.add(InfoHomeOne("General"))
-        list.add(InfoHomeOne("Technical Section"))
-        list.add(InfoHomeOne("Markets"))
-        list.add(InfoHomeOne("Charts"))
-        list.add(InfoHomeOne("General"))
+        list.add(InfoHomeOne("General",false))
+        list.add(InfoHomeOne("Technical Section",true))
+        list.add(InfoHomeOne("Markets",false))
+        list.add(InfoHomeOne("Charts",false))
+        list.add(InfoHomeOne("General",false))
 
         return list
 
