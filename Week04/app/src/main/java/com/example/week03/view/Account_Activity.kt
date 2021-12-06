@@ -1,7 +1,8 @@
-package com.example.week03
+package com.example.week03.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.week03.R
 
 class Account_Activity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

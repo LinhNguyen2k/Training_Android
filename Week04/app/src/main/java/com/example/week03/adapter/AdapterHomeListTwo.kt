@@ -1,6 +1,5 @@
 package com.example.week03.adapter
 
-import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -17,7 +16,7 @@ import com.example.week03.model.InfoHomeTwo
 class AdapterHomeListTwo(private val listInfoTwo: ArrayList<InfoHomeTwo>) :
     RecyclerView.Adapter<AdapterHomeListTwo.ViewHolder>() {
     private val viewBinderHelper = ViewBinderHelper()
-    lateinit var onClickItem: (positions: Int) -> Unit
+    private  var onClickItem: ((Int) -> Unit?)? = null
 
     fun setOnclickItem(even: (position: Int) -> Unit) {
         onClickItem = even
@@ -36,7 +35,7 @@ class AdapterHomeListTwo(private val listInfoTwo: ArrayList<InfoHomeTwo>) :
 
         init {
             layout_custom.setOnClickListener {
-                onClickItem.invoke(adapterPosition)
+                onClickItem!!.invoke(adapterPosition)
             }
         }
     }
@@ -57,7 +56,6 @@ class AdapterHomeListTwo(private val listInfoTwo: ArrayList<InfoHomeTwo>) :
 
         viewBinderHelper.bind(holder.swipeRevealLayout, position.toString())
         viewBinderHelper.setOpenOnlyOne(true)
-        viewBinderHelper.closeLayout(holder.adapterPosition.toString())
         holder.layoutDelete.setOnClickListener {
             listInfoTwo.removeAt(holder.adapterPosition)
             notifyItemRemoved(holder.adapterPosition)

@@ -1,16 +1,14 @@
 package com.example.week03.fragments
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
-import androidx.navigation.NavDirections
 import androidx.navigation.fragment.findNavController
 import com.example.week03.R
-import com.example.week03.SQLite_Account
+import com.example.week03.sql.SQLite_Account
 import com.example.week03.model.User
 import kotlinx.android.synthetic.main.fragment_login.view.*
 import kotlinx.android.synthetic.main.fragment_sign_up.view.*
@@ -22,7 +20,7 @@ class SignUp : Fragment() {
     private val sqLite_account = SQLite_Account(context)
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+        savedInstanceState: Bundle?,
     ): View? {
         val view = inflater.inflate(R.layout.fragment_sign_up, container, false)
 
@@ -38,14 +36,12 @@ class SignUp : Fragment() {
                     Toast.LENGTH_LONG
                 ).show()
                 return@setOnClickListener
-            }
-
-            else {
-                if (!sqLite_account.checkEmail(email)){
+            } else {
+                if (!sqLite_account.checkEmail(email)) {
                     val use = User(email, password)
                     var account = SignUpDirections.actionSignUpToEmail(use)
                     findNavController().navigate(account)
-                }else{
+                } else {
                     Toast.makeText(
                         context,
                         "Email chưa đúng",

@@ -22,7 +22,7 @@ class NewsArticle : Fragment() {
     private val args by navArgs<NewsArticleArgs>()
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+        savedInstanceState: Bundle?,
     ): View? {
         val view = inflater.inflate(R.layout.fragment_news_article, container, false)
         val layoutManager = LinearLayoutManager(activity, RecyclerView.HORIZONTAL, false)
@@ -42,11 +42,11 @@ class NewsArticle : Fragment() {
     fun getAllItem(): ArrayList<InfoHomeOne> {
         val list = ArrayList<InfoHomeOne>()
 
-        list.add(InfoHomeOne("EDITORIAL",true))
-        list.add(InfoHomeOne("CRYPTO NEWS",false))
-        list.add(InfoHomeOne("RAW MATERIAL",false))
-        list.add(InfoHomeOne("ECONOMICS",false))
-        list.add(InfoHomeOne("EDITORIAL",false))
+        list.add(InfoHomeOne("EDITORIAL", true))
+        list.add(InfoHomeOne("CRYPTO NEWS", false))
+        list.add(InfoHomeOne("RAW MATERIAL", false))
+        list.add(InfoHomeOne("ECONOMICS", false))
+        list.add(InfoHomeOne("EDITORIAL", false))
 
         return list
 

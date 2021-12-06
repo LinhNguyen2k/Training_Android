@@ -20,7 +20,7 @@ class New : Fragment() {
     private val adapterNews = AdapterNews(listItemNews)
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+        savedInstanceState: Bundle?,
     ): View? {
         val view = inflater.inflate(R.layout.fragment_news, container, false)
 
@@ -58,7 +58,7 @@ class New : Fragment() {
     fun getAllItem(): ArrayList<InfoHomeOne> {
         val list = ArrayList<InfoHomeOne>()
 
-        list.add(InfoHomeOne("EDITORIAL",true))
+        list.add(InfoHomeOne("EDITORIAL", true))
         list.add(InfoHomeOne("CRYPTO NEWS", false))
         list.add(InfoHomeOne("RAW MATERIAL", false))
         list.add(InfoHomeOne("ECONOMICS", false))

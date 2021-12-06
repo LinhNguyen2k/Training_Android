@@ -27,12 +27,12 @@ class Coin : Fragment() {
     private val args: CoinArgs by navArgs()
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+        savedInstanceState: Bundle?,
     ): View? {
         val view = inflater.inflate(R.layout.fragment_coin, container, false)
-        if (args.sendData?.text1 == null){
+        if (args.sendData?.text1 == null) {
             view.tv_neo.text = "NEO INDEX"
-        }else{
+        } else {
             view.tv_neo.text = args.sendData?.text1
         }
         val layoutManager = LinearLayoutManager(activity, RecyclerView.HORIZONTAL, false)
@@ -55,11 +55,11 @@ class Coin : Fragment() {
     fun getAllItem(): ArrayList<InfoHomeOne> {
         val list = ArrayList<InfoHomeOne>()
 
-        list.add(InfoHomeOne("General",false))
-        list.add(InfoHomeOne("Technical Section",true))
-        list.add(InfoHomeOne("Markets",false))
-        list.add(InfoHomeOne("Charts",false))
-        list.add(InfoHomeOne("General",false))
+        list.add(InfoHomeOne("General", false))
+        list.add(InfoHomeOne("Technical Section", true))
+        list.add(InfoHomeOne("Markets", false))
+        list.add(InfoHomeOne("Charts", false))
+        list.add(InfoHomeOne("General", false))
 
         return list
 

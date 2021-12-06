@@ -21,7 +21,7 @@ class Menu : Fragment() {
     private var adapterMenuItem = AdapterMenu(listMenuItem)
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+        savedInstanceState: Bundle?,
     ): View? {
         val view = inflater.inflate(R.layout.fragment_menu, container, false)
 
@@ -38,27 +38,27 @@ class Menu : Fragment() {
     fun getAllItem(): ArrayList<MenuItem> {
         val list = ArrayList<MenuItem>()
 
-       list.add(MenuItem("",4,0))
-        list.add(MenuItem("Alerts",1,R.drawable.icons_8_alarm))
-        list.add(MenuItem("Predictions",1,R.drawable.icons_8_left_and_right_arrows))
-        list.add(MenuItem("Saved elements",1,R.drawable.icons_8_pin))
-        list.add(MenuItem("Remove Ads",1,R.drawable.icons_8_no_entry))
+        list.add(MenuItem("", 4, 0))
+        list.add(MenuItem("Alerts", 1, R.drawable.icons_8_alarm))
+        list.add(MenuItem("Predictions", 1, R.drawable.icons_8_left_and_right_arrows))
+        list.add(MenuItem("Saved elements", 1, R.drawable.icons_8_pin))
+        list.add(MenuItem("Remove Ads", 1, R.drawable.icons_8_no_entry))
 
-        list.add(MenuItem("",4,0))
-        list.add(MenuItem("Tools",3,0))
+        list.add(MenuItem("", 4, 0))
+        list.add(MenuItem("Tools", 3, 0))
 
-        list.add(MenuItem("Select Stocks",2,R.drawable.icons_8_profit_2))
-        list.add(MenuItem("Currency Exchange",2,R.drawable.icons_8_swap))
-        list.add(MenuItem("Webinar",2,R.drawable.icons_8_video_call))
-        list.add(MenuItem("Best Broker",2,R.drawable.icons_8_rent))
+        list.add(MenuItem("Select Stocks", 2, R.drawable.icons_8_profit_2))
+        list.add(MenuItem("Currency Exchange", 2, R.drawable.icons_8_swap))
+        list.add(MenuItem("Webinar", 2, R.drawable.icons_8_video_call))
+        list.add(MenuItem("Best Broker", 2, R.drawable.icons_8_rent))
 
-        list.add(MenuItem("",4,0))
-        list.add(MenuItem("Markets",3,0))
+        list.add(MenuItem("", 4, 0))
+        list.add(MenuItem("Markets", 3, 0))
 
-        list.add(MenuItem("Select Stocks",2,R.drawable.icons_8_profit_2))
-        list.add(MenuItem("Currency Exchange",2,R.drawable.icons_8_swap))
-        list.add(MenuItem("Webinar",2,R.drawable.icons_8_video_call))
-        list.add(MenuItem("Best Broker",2,R.drawable.icons_8_rent))
+        list.add(MenuItem("Select Stocks", 2, R.drawable.icons_8_profit_2))
+        list.add(MenuItem("Currency Exchange", 2, R.drawable.icons_8_swap))
+        list.add(MenuItem("Webinar", 2, R.drawable.icons_8_video_call))
+        list.add(MenuItem("Best Broker", 2, R.drawable.icons_8_rent))
 
         return list
 

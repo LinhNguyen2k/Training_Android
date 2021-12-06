@@ -11,7 +11,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.example.week03.R
-import com.example.week03.SQLite_Account
+import com.example.week03.sql.SQLite_Account
 import com.example.week03.model.User
 import kotlinx.android.synthetic.main.fragment_email.*
 import kotlinx.android.synthetic.main.fragment_email.view.*
@@ -24,7 +24,7 @@ class Email : Fragment() {
     var time = 5
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+        savedInstanceState: Bundle?,
     ): View? {
         val view = inflater.inflate(R.layout.fragment_email, container, false)
         val sqliteAccount = SQLite_Account(context)
@@ -63,7 +63,7 @@ class Email : Fragment() {
     }
 
     private fun initHandler() {
-        mHandler = object : Handler() {
+        mHandler = object : Handler(Looper.getMainLooper()) {
             override fun handleMessage(msg: Message) {
                 when (msg.what) {
                     MESSAGE -> {

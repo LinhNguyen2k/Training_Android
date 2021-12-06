@@ -1,15 +1,13 @@
-package com.example.week03
+package com.example.week03.sql
 
-import android.R.attr
+
 import android.content.ContentValues
 import android.content.Context
 import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 import java.lang.Exception
-import android.R.attr.password
 import com.example.week03.model.User
-import com.example.week03.model.Users
 
 
 class SQLite_Account(context: Context?) :
@@ -19,13 +17,14 @@ class SQLite_Account(context: Context?) :
         const val DB_TABLE_LOGIN = "registration"
         const val DB_VERSION = 1
     }
+
     override fun onCreate(db: SQLiteDatabase) {
         db.execSQL("CREATE TABLE registration(ID INTEGER PRIMARY KEY AUTOINCREMENT, email TEXT,password TEXT )")
     }
 
     override fun onUpgrade(db: SQLiteDatabase, oldVersion: Int, newVersion: Int) {
         if (oldVersion != newVersion) {
-            db.execSQL(" DROP TABLE IF EXISTS " + DB_TABLE_LOGIN)
+            db.execSQL(" DROP TABLE IF EXISTS $DB_TABLE_LOGIN")
             onCreate(db)
         }
     }
@@ -60,16 +59,18 @@ class SQLite_Account(context: Context?) :
             false
         }
     }
+
     fun checkEmail(email: String): Boolean {
         var list = GetallUser()
         if (list != null) {
             for (item in list) {
-                if (item.email.equals(email))
+                if (item.email == email)
                     return false
             }
         }
         return true
     }
+
     fun updateData(email: String, password: String):
             Boolean {
         val db = this.writableDatabase

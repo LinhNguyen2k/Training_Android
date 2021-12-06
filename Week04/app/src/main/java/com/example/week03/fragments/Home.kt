@@ -2,9 +2,11 @@ package com.example.week03.fragments
 
 import android.graphics.Color
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.DividerItemDecoration
@@ -31,7 +33,7 @@ class Home : Fragment() {
     private var adapterHomeListTwo = AdapterHomeListTwo(listInfoHomeTwo)
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+        savedInstanceState: Bundle?,
     ): View? {
         val view = inflater.inflate(R.layout.fragment_home, container, false)
 
@@ -47,11 +49,11 @@ class Home : Fragment() {
         view.rc_listtwo.addItemDecoration(itemDecoration)
 
 
+
         view.tv_loadMore.setOnClickListener {
             var index = listInfoHomeTwo.size
-            listInfoHomeTwo.addAll(listLoadMore(index)!!)
-            adapterHomeListTwo = AdapterHomeListTwo(listInfoHomeTwo)
-            view.rc_listtwo.adapter = adapterHomeListTwo
+            listInfoHomeTwo.addAll( listLoadMore(index)!!)
+            adapterHomeListTwo.notifyDataSetChanged()
         }
         view.btn_notification.setOnClickListener {
             val rnd = Random()
@@ -62,7 +64,6 @@ class Home : Fragment() {
 
         adapterHomeListTwo.setOnclickItem {
             val item = listInfoHomeTwo[it]
-
             val action = HomeDirections.actionHome2ToCoin(item)
             findNavController().navigate(action)
         }
@@ -86,11 +87,7 @@ class Home : Fragment() {
     fun listLoadMore(size: Int): ArrayList<InfoHomeTwo>? {
         val list = ArrayList<InfoHomeTwo>()
         for (i in (size + 1) until (size + 10)) {
-            val newItem = InfoHomeTwo(
-                "DOWN JONES",
-                "new item at position $i",
-                "10:44:45", "+203 (+1,04%)"
-            )
+            val newItem = InfoHomeTwo("DOWN JONES", "NYSE  10:44:45", "10:44:45", "+203 (+1,04%)")
             list.add(newItem)
         }
         return list
