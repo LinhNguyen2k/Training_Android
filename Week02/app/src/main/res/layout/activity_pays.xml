@@ -10,9 +10,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#f9f9f9"
-
-        android:minHeight="830dp">
+        android:background="#f9f9f9">
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/line1"
@@ -182,7 +180,7 @@
                     android:background="@drawable/custom_btn_money"
                     android:fontFamily="@font/montserrat_semibold"
                     android:left="@+id/img_edit"
-                    android:minWidth="140dp"
+                    android:minWidth="100dp"
                     android:text="20,00€"
                     android:textColor="@color/white"
                     android:textSize="20sp" />
