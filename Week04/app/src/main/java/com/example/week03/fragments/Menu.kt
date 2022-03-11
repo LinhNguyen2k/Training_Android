@@ -17,7 +17,7 @@ import kotlinx.android.synthetic.main.fragment_menu.view.*
 
 class Menu : Fragment() {
 
-    private var listMenuItem = getAllItem()
+    private var listMenuItem = getAllItems()
     private var adapterMenuItem = AdapterMenu(listMenuItem)
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -35,7 +35,7 @@ class Menu : Fragment() {
         return view
     }
 
-    fun getAllItem(): ArrayList<MenuItem> {
+    fun getAllItems(): ArrayList<MenuItem> {
         val list = ArrayList<MenuItem>()
 
         list.add(MenuItem("", 4, 0))

@@ -65,7 +65,7 @@ class SignUp : Fragment() {
                 Toast.makeText(context, "Tài khoản không được để trống.", Toast.LENGTH_LONG)
                     .show()
                 return@setOnClickListener
-            } else if (!password.isEmpty() && !email.isEmpty()) {
+            } else if (password.isNotEmpty() && email.isNotEmpty()) {
 
                 val db = SQLite_Account(context)
                 val value: Long = db.addUser(email, password)

@@ -55,21 +55,6 @@ class Login : Fragment() {
         }
 
         view.tv_forgotPassword.setOnClickListener {
-
-//            if (!view.edt_email.text.toString().isEmpty()) {
-//                val email = view.edt_email.text.toString().trim()
-//                val password = view.edt_passWord.text.toString().trim()
-//                if (!sqLite_account.checkEmail(email)) {
-//                    val use = User(email, password)
-//                    val action = LoginDirections.actionLoginToEmail(use)
-//                    findNavController().navigate(action)
-//                } else {
-//                    Toast.makeText(context, "Email chưa tồn tại trong hệ thống !!!", Toast.LENGTH_LONG)
-//                        .show()
-//                }
-//            } else {
-//                Toast.makeText(context, "Bạn phải nhập email !!!", Toast.LENGTH_LONG).show()
-//            }
             val email = view.edt_email.text.toString().trim()
             val password = view.edt_passWord.text.toString().trim()
             if (email.isEmpty()) {
@@ -98,10 +83,6 @@ class Login : Fragment() {
         view.tv_signUp.setOnClickListener {
             findNavController().navigate(R.id.action_login_to_signUp)
         }
-
-
-
-
         return view
     }
 }

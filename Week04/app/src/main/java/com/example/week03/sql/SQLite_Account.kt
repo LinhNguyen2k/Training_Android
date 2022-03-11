@@ -61,7 +61,7 @@ class SQLite_Account(context: Context?) :
     }
 
     fun checkEmail(email: String): Boolean {
-        var list = GetallUser()
+        var list = getallUser()
         if (list != null) {
             for (item in list) {
                 if (item.email == email)
@@ -110,7 +110,7 @@ class SQLite_Account(context: Context?) :
 //        return arrayList
 //    }
 
-    fun GetallUser(): List<User>? {
+    fun getallUser(): List<User>? {
         val user: ArrayList<User> = ArrayList<User>()
         val db = this.writableDatabase
         val cursor: Cursor = db.query(

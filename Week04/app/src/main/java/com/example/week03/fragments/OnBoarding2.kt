@@ -26,7 +26,7 @@ class OnBoarding2 : Fragment() {
             findNavController().navigate(R.id.action_onBoarding22_to_onBoarding32)
         }
         view.view_backOnboarding2.setOnClickListener {
-            findNavController().navigateUp()
+            findNavController().popBackStack()
         }
 
         view.tv_skip.setOnClickListener {

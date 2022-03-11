@@ -83,7 +83,9 @@
         <entry key="..\:/Code/Android_2021/Training/Week04/app/src/main/res/drawable-mdpi/custom_layout_neo1.xml" value="0.290625" />
         <entry key="..\:/Code/Android_2021/Training/Week04/app/src/main/res/drawable-mdpi/custom_layout_new_article1.xml" value="0.290625" />
         <entry key="..\:/Code/Android_2021/Training/Week04/app/src/main/res/drawable-v24/custom_layout_home_list1.xml" value="0.290625" />
+        <entry key="..\:/Code/Android_2021/Training/Week04/app/src/main/res/drawable-v24/custom_radius_info1.xml" value="0.2351851851851852" />
         <entry key="..\:/Code/Android_2021/Training/Week04/app/src/main/res/drawable-xhdpi/custom_radius_list_home.xml" value="0.290625" />
+        <entry key="..\:/Code/Android_2021/Training/Week04/app/src/main/res/drawable-xxhdpi/custom_login_unenable.xml" value="0.2351851851851852" />
         <entry key="..\:/Code/Android_2021/Training/Week04/app/src/main/res/drawable/custom_bg_icon_menu.xml" value="0.290625" />
         <entry key="..\:/Code/Android_2021/Training/Week04/app/src/main/res/drawable/custom_button_coin.xml" value="0.290625" />
         <entry key="..\:/Code/Android_2021/Training/Week04/app/src/main/res/drawable/custom_coin_button.xml" value="0.290625" />
@@ -91,6 +93,10 @@
         <entry key="..\:/Code/Android_2021/Training/Week04/app/src/main/res/drawable/custom_layout_news.xml" value="0.290625" />
         <entry key="..\:/Code/Android_2021/Training/Week04/app/src/main/res/drawable/custom_load.xml" value="0.290625" />
         <entry key="..\:/Code/Android_2021/Training/Week04/app/src/main/res/drawable/custom_load_radius.xml" value="0.290625" />
+        <entry key="..\:/Code/Android_2021/Training/Week04/app/src/main/res/drawable/custom_login_button_resend_email.xml" value="0.2351851851851852" />
+        <entry key="..\:/Code/Android_2021/Training/Week04/app/src/main/res/drawable/custom_menu_viewtype1.xml" value="0.2351851851851852" />
+        <entry key="..\:/Code/Android_2021/Training/Week04/app/src/main/res/drawable/custom_radius_info2.xml" value="0.290625" />
+        <entry key="..\:/Code/Android_2021/Training/Week04/app/src/main/res/drawable/custom_selected_color_bottom_menu.xml" value="0.290625" />
         <entry key="..\:/Code/Android_2021/Training/Week04/app/src/main/res/drawable/custom_selected_icon_bottom_menu.xml" value="0.290625" />
         <entry key="..\:/Code/Android_2021/Training/Week04/app/src/main/res/layout/activity_account.xml" value="0.2708333333333333" />
         <entry key="..\:/Code/Android_2021/Training/Week04/app/src/main/res/layout/activity_home.xml" value="0.17300724637681159" />

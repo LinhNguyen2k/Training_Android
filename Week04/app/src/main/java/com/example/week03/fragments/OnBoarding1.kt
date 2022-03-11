@@ -17,7 +17,7 @@ import kotlinx.android.synthetic.main.fragment_on_boarding1.view.*
 
 class OnBoarding1 : Fragment() {
     lateinit var sharedPreferences: SharedPreferences
-
+    var check : Boolean = false
     override fun onAttach(context: Context) {
         CheckSkip()
         super.onAttach(context)
@@ -27,6 +27,7 @@ class OnBoarding1 : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
     ): View? {
+
         val view = inflater.inflate(R.layout.fragment_on_boarding1, container, false)
 
         view.tv_nextBoarding1.setOnClickListener {
@@ -38,9 +39,7 @@ class OnBoarding1 : Fragment() {
             val editor = sharedPreferences.edit()
             editor.putBoolean("check", true)
             editor.apply()
-            val intent = Intent(activity,
-                Account_Activity::class.java).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
-            activity?.startActivity(intent)
+            activity?.startActivity(Intent(activity, Account_Activity::class.java).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK))
         }
 
         return view
@@ -48,10 +47,15 @@ class OnBoarding1 : Fragment() {
 
     fun CheckSkip() {
         sharedPreferences = requireActivity().getSharedPreferences("SAVE_CHECK", MODE_PRIVATE)
-        val check = sharedPreferences.getBoolean("check", false)
+        check = sharedPreferences.getBoolean("check", false)
         if (check) {
-            val intent = Intent(activity, Account_Activity::class.java)
-            activity?.startActivity(intent)
+            activity?.startActivity(Intent(activity, Account_Activity::class.java).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK))
+        }
+    }
+
+    override fun onDetach() {
+        if (check){
+            super.onDetach()
         }
     }
 
