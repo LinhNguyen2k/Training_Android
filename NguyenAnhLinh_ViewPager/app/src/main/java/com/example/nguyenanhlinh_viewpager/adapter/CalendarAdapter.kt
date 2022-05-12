@@ -42,7 +42,7 @@ class CalendarAdapter(private val daysOfMonth: ArrayList<DayOfMonth>, var contex
     override fun onBindViewHolder(holder: ViewHolder, @SuppressLint("RecyclerView") position: Int) {
         var days = daysOfMonth[position]
 
-        holder.tv_dayOfMonth.text = days.day.toString()
+        holder.tv_dayOfMonth.text = days.day
 
        if (days.check){
            index = position

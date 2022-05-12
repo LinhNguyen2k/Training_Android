@@ -14,7 +14,6 @@ class Home : AppCompatActivity() {
         setContentView(R.layout.activity_home)
         //this.setRequestedOrientation(SCREEN_ORIENTATION_REVERSE_LANDSCAPE);
         bottom_NVT.background = null
-//        tv_fizz.setText("\uD83C\uDFAC")
         layout_info.setOnClickListener {
             val intent: Intent = Intent(applicationContext,Pays::class.java)
             startActivity(intent)

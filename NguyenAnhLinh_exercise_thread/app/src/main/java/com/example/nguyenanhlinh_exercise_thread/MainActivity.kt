@@ -184,8 +184,7 @@ class MainActivity : AppCompatActivity() {
                 if (count != 0) {
                     try {
                         Thread.sleep(3000)
-                        mHandler.post {
-                            randomColor()
+                        mHandler.post { randomColor()
                         }
                     } catch (e: InterruptedException) {
                         e.printStackTrace()

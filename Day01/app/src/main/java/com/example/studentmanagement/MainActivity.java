@@ -32,12 +32,13 @@ public class MainActivity extends AppCompatActivity {
 
     ImageView img_addStudent;
     EditText edt_searchStudent;
-    Button btn_sortByName, btn_sortByDBO,btn_sortByPhoneNumber, btn_findByUniversity, btn_findByCollege;
+    Button btn_sortByName, btn_sortByDBO, btn_sortByPhoneNumber, btn_findByUniversity, btn_findByCollege;
     RecyclerView rc_listStudents;
     List<Students> studentsLists;
     AdapterStudents adapterStudents;
     Students students;
     int mPosition;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(MainActivity.this);
         rc_listStudents.setHasFixedSize(true);
         rc_listStudents.setLayoutManager(linearLayoutManager);
-        adapterStudents= new AdapterStudents(studentsLists, getBaseContext());
+        adapterStudents = new AdapterStudents(studentsLists, getBaseContext());
         rc_listStudents.setAdapter(adapterStudents);
 
         adapterStudents.setOnclickStudents(new setOnclickStudents() {
@@ -58,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClickItem(Students students) {
                 mPosition = studentsLists.indexOf(students);
 //                Toast.makeText(getBaseContext(),"Hello",Toast.LENGTH_LONG).show();
-                Intent intent = new Intent(MainActivity.this,ProFileStudent.class);
+                Intent intent = new Intent(MainActivity.this, ProFileStudent.class);
                 intent.putExtra("object", (Parcelable) studentsLists.get(mPosition));
                 startActivity(intent);
             }
@@ -67,8 +68,8 @@ public class MainActivity extends AppCompatActivity {
         img_addStudent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getBaseContext(),AddStudent.class);
-                startActivityForResult(intent,2);
+                Intent intent = new Intent(getBaseContext(), AddStudent.class);
+                startActivityForResult(intent, 2);
             }
         });
 
@@ -127,15 +128,14 @@ public class MainActivity extends AppCompatActivity {
 
     private void filter(String text) {
         ArrayList<Students> filter = new ArrayList<>();
-        for(Students item : studentsLists)
-        {
-            if(item.getName().toLowerCase().contains(text.toLowerCase()))
+        for (Students item : studentsLists) {
+            if (item.getName().toLowerCase().contains(text.toLowerCase()))
                 filter.add(item);
         }
         adapterStudents.filterList(filter);
     }
 
-    public void AnhXa(){
+    public void AnhXa() {
         img_addStudent = findViewById(R.id.img_addStudent);
         edt_searchStudent = findViewById(R.id.edt_searchStudent);
         btn_sortByName = findViewById(R.id.btn_sortByName);
@@ -164,29 +164,31 @@ public class MainActivity extends AppCompatActivity {
 
             case RESULT_OK:
                 String name = data.getStringExtra("Name");
-                int phoneNumber = Integer.parseInt (data.getStringExtra("PhoneNumber"));
+                int phoneNumber = Integer.parseInt(data.getStringExtra("PhoneNumber"));
                 String dateOfBirth = data.getStringExtra("DateOfBirth");
                 String level = data.getStringExtra("Level");
                 String major = data.getStringExtra("Major");
 
-                    studentsLists.add(new Students(name,phoneNumber,level,dateOfBirth,major));
-                    adapterStudents.notifyDataSetChanged();
-                    SQL_Helper sql_helper = new SQL_Helper(this);
-                    sql_helper.InsertStudent(new Students(name,phoneNumber,level,dateOfBirth,major));
-                    SetLayout(studentsLists);
+                studentsLists.add(new Students(name, phoneNumber, level, dateOfBirth, major));
+                adapterStudents.notifyDataSetChanged();
+                SQL_Helper sql_helper = new SQL_Helper(this);
+                sql_helper.InsertStudent(new Students(name, phoneNumber, level, dateOfBirth, major));
+                SetLayout(studentsLists);
                 break;
         }
     }
+
     @RequiresApi(api = Build.VERSION_CODES.N)
-    public void SortByName(){
+    public void SortByName() {
         List<Students> list = new ArrayList<>();
         SQL_Helper sql_helper = new SQL_Helper(this);
         list = sql_helper.GetAllStudents();
         Collections.sort(list, (sv1, sv2) -> sv1.getName().compareTo(sv2.getName()));
         SetLayout(list);
     }
+
     @RequiresApi(api = Build.VERSION_CODES.N)
-    public void SortByDBO(){
+    public void SortByDBO() {
         List<Students> list = new ArrayList<>();
         SQL_Helper sql_helper = new SQL_Helper(this);
         list = sql_helper.GetAllStudents();
@@ -194,8 +196,9 @@ public class MainActivity extends AppCompatActivity {
         Collections.sort(list, (sv1, sv2) -> sv2.getdOfBirth().compareTo(sv1.getdOfBirth()));
         SetLayout(list);
     }
+
     @RequiresApi(api = Build.VERSION_CODES.N)
-    public void SortByDPhoneNumber(){
+    public void SortByDPhoneNumber() {
         List<Students> list = new ArrayList<>();
         SQL_Helper sql_helper = new SQL_Helper(this);
         list = sql_helper.GetAllStudents();
@@ -208,16 +211,17 @@ public class MainActivity extends AppCompatActivity {
         });
         SetLayout(list);
     }
-    public void SetLayout(List<Students> list){
+
+    public void SetLayout(List<Students> list) {
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(MainActivity.this);
         rc_listStudents.setHasFixedSize(true);
         rc_listStudents.setLayoutManager(linearLayoutManager);
-       // rc_listStudents.addItemDecoration(new DividerItemDecoration(MainActivity.this,DividerItemDecoration.VERTICAL));
-        adapterStudents= new AdapterStudents(list, getBaseContext());
+        // rc_listStudents.addItemDecoration(new DividerItemDecoration(MainActivity.this,DividerItemDecoration.VERTICAL));
+        adapterStudents = new AdapterStudents(list, getBaseContext());
         rc_listStudents.setAdapter(adapterStudents);
     }
 
-    public void  filterByLevel(String level) {
+    public void filterByLevel(String level) {
         List<Students> list = new ArrayList<>();
         if (level.contains("Cao Đẳng")) {
             for (Students students : studentsLists) {

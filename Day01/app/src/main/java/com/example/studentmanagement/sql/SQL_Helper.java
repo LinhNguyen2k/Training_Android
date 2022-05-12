@@ -80,8 +80,7 @@ public class SQL_Helper extends SQLiteOpenHelper {
         return sqLiteDatabase.delete(DB_TABLE,"phoneNumber=?",new String[]{String.valueOf(phoneNumber)});
 
     }
-    public List<Students> GetAllStudents()
-    {
+    public List<Students> GetAllStudents() {
         List<Students> studentsLists = new ArrayList<>();
         sqLiteDatabase = getWritableDatabase();
         Cursor cursor = sqLiteDatabase.query(false, DB_TABLE,
